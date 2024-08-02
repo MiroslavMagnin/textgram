@@ -53,4 +53,5 @@ public class JwtAuthenticationFilter implements GatewayFilter {
     private boolean authMissing(ServerHttpRequest request) {
         return !request.getHeaders().containsKey("Authorization");
     }
+
 }

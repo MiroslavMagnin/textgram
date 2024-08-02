@@ -19,24 +19,38 @@ public class GatewayConfig {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("auth-service", r -> r.path("/auth/**")
-                        .uri("http://auth:8090")) // http://localhost:8090
 
-                .route("users-service", r -> r.path("/users/**")
+                .route("auth-service", r -> r.path("/auth/**")
+                        .uri("http://localhost:8090")) // http://auth:8090
+
+                .route("user-service", r -> r.path("/user/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://users:8091")) // http://localhost:8091
+                        .uri("http://localhost:8091")) // http://user:8091
+
+                .route("notification-service", r -> r.path("/notification/**")
+                        .filters(f -> f.filter(filter))
+                        .uri("http://localhost:8092")) // http://notification:8092
 
                 .route("analytics-service", r -> r.path("/analytics/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://analytics:8093")) // http://localhost:8093
+                        .uri("http://localhost:8093")) // http://analytcis:8093
+
+                .route("post-service", r -> r.path("/post/**")
+                        .filters(f -> f.filter(filter))
+                        .uri("http://localhost:8094")) // http://post:8094
+
+                .route("feed-service", r -> r.path("/feed/**")
+                        .filters(f -> f.filter(filter))
+                        .uri("http://localhost:8095")) // http://feed:8095
 
                 .build();
     }
 
+    // CORS (cross-origin resource sharing)
     @Bean
     public CorsWebFilter corsWebFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.addAllowedOrigin("http://localhost:63342"); // Укажите URL вашего фронтенда
+        corsConfig.addAllowedOrigin("http://localhost:63342"); // frontend URL
         corsConfig.addAllowedHeader("*");
         corsConfig.addAllowedMethod("*");
 
@@ -45,4 +59,5 @@ public class GatewayConfig {
 
         return new CorsWebFilter(source);
     }
+
 }

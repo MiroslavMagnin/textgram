@@ -5,8 +5,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/FeedServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/jwt/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/PostServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/PostNotCreatedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/PostNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/PostNotUpdatedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/mapper/Mappable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/mapper/PostMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/repository/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/config/GatewayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UsersServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaTopicConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/controller/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/controller/HealthDataController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/dto/HealthDataDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/ExceptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/ExceptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/HealthDataNotCreatedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/HealthDataNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/UserNotCreatedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/UserNotCreatedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/mapper/HealthDataMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/mapper/Mappable.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/mapper/Mappable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/model/HealthData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/repository/HealthDataRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/repository/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/service/HealthDataService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/util/CustomDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/util/CustomSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/util/UserDTOValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/util/UserDTOValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/resources/application-test.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,21 +82,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2k2j9AZ91MugF6g3afZmWK5QGd8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,10 +110,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.GatewayServerApplication.executor": "Run",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "M:/SpringProjects/textgram/analytics-service",
+    "last_opened_file_path": "M:/SpringProjects/textgram/feed-service/src/main/java/ru/miro/feed_service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,15 +126,21 @@
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "java.sql.Driver",
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="M:\SpringProjects\textgram\feed-service\src\main\java\ru\miro\feed_service" />
+      <recent name="M:\SpringProjects\textgram\post-service\src\main\java\ru\miro\post_service" />
+      <recent name="M:\SpringProjects\textgram\post-service\src\test\resources" />
       <recent name="M:\SpringProjects\textgram\analytics-service" />
       <recent name="M:\SpringProjects\textgram\notification-service\src\main\java\ru\miro" />
-      <recent name="M:\SpringProjects\textgram\notification-service\src\main\java\ru\miro\config" />
-      <recent name="M:\SpringProjects\textgram" />
-      <recent name="M:\SpringProjects\textgram\users-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="M:\SpringProjects\textgram\analytics-service" />
@@ -95,6 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FeedServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="feed-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.feed_service.FeedServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.gateway_service.GatewayServerApplication" />
@@ -109,8 +191,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PostServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="post-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.post_service.PostServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsersServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="users-service" />
+      <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.users_service.UsersServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,7 +214,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1722488420650</updated>
-      <workItem from="1722488422621" duration="3456000" />
+      <workItem from="1722488422621" duration="4069000" />
+      <workItem from="1722570559942" duration="12034000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -135,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722491731404</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Init commit">
+      <option name="closed" value="true" />
+      <created>1722491895822</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722491895823</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
