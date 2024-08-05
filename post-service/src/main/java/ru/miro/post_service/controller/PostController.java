@@ -14,7 +14,7 @@ import ru.miro.post_service.service.PostService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/post/")
+@RequestMapping("/post")
 @RequiredArgsConstructor
 @Slf4j
 public class PostController {

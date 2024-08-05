@@ -1,6 +1,8 @@
 package ru.miro.post_service.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.miro.post_service.dto.PostDTO;
@@ -22,21 +24,25 @@ public class PostService {
     private final PostRepository postRepository;
     private final PostMapper postMapper;
 
+    @Cacheable(cacheNames = "posts")
     public List<PostDTO> findAll() {
         return postRepository.findAll().stream().map(postMapper::toDTO).collect(Collectors.toList());
     }
 
+    @Cacheable(cacheNames = "posts", key = "#postId")
     public PostDTO findOne(Long postId) {
         return postRepository.findById(postId).map(postMapper::toDTO).orElseThrow(() -> new PostNotFoundException(postId));
     }
 
     @Transactional
+    @CacheEvict(cacheNames = "posts", allEntries = true)
     public void create(PostDTO postDTO) {
         // Get postDTO, map to entity Post, add createdAt and updatedAt timestamp
         postRepository.save(enrichCreatedPost(postMapper.toEntity(postDTO)));
     }
 
     @Transactional
+    @CacheEvict(cacheNames = "posts", allEntries = true)
     public void update(PostDTO postDTO) {
         if (postDTO.getPostId() == null)
             throw new PostNotUpdatedException("There isn't the post ID in the request");
@@ -58,6 +64,7 @@ public class PostService {
     }
 
     @Transactional
+    @CacheEvict(cacheNames = "posts", key = "#postId")
     public void delete(Long postId) {
         postRepository.deleteById(postId);
     }

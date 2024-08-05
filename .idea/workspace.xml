@@ -4,74 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/FeedServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed-service/src/main/java/ru/miro/feed_service/jwt/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/PostServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/ExceptionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/PostNotCreatedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/PostNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/exception/PostNotUpdatedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/mapper/Mappable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/mapper/PostMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/repository/PostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/test/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/jwt/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="add basic services">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UsersServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/BeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaProducerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaTopicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/controller/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/controller/HealthDataController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/dto/HealthDataDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/ExceptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/ExceptionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/HealthDataNotCreatedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/HealthDataNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/UserNotCreatedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/UserNotCreatedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/jwt/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/mapper/HealthDataMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/mapper/Mappable.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/mapper/Mappable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/model/HealthData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/repository/HealthDataRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/service/HealthDataService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/util/CustomDeserializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/util/CustomSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/miro/users_service/util/UserDTOValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/util/UserDTOValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/resources/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/dto/HealthDataDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/kafka/KafkaListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/kafka/KafkaListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/service/UsersStatisticsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/UsersServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/UsersServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/PostServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/PostServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/mapper/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,15 +58,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.zookeeper: Compose Deployment.executor": "Run",
+    "Maven.textgram [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
     "Spring Boot.GatewayServerApplication.executor": "Run",
+    "Spring Boot.PostServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "Spring Boot.UsersServiceApplication.executor": "Run",
     "extract.method.default.visibility": "private",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "M:/SpringProjects/textgram/feed-service/src/main/java/ru/miro/feed_service",
+    "last_opened_file_path": "M:/SpringProjects/data-analyser",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,6 +97,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="M:\SpringProjects\textgram\feed-service\src\main\java\ru\miro\feed_service" />
@@ -146,6 +112,11 @@
       <recent name="M:\SpringProjects\textgram\analytics-service" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -155,7 +126,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml.kafka: Compose Deployment">
     <configuration name="AnalyticsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="analytics-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.analytics_service.AnalyticsServiceApplication" />
@@ -198,13 +169,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.users_service.UsersServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.users_service.UserServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.redis: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="redis" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.zookeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="zookeeper" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.zookeeper: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.redis: Compose Deployment" />
+      <item itemvalue="Spring Boot.PostServiceApplication" />
+      <item itemvalue="Spring Boot.AnalyticsServiceApplication" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.FeedServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServerApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.zookeeper: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.redis: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -215,7 +248,8 @@
       <option name="presentableId" value="Default" />
       <updated>1722488420650</updated>
       <workItem from="1722488422621" duration="4069000" />
-      <workItem from="1722570559942" duration="12034000" />
+      <workItem from="1722570559942" duration="12736000" />
+      <workItem from="1722826300425" duration="5405000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -233,14 +267,34 @@
       <option name="project" value="LOCAL" />
       <updated>1722491895823</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add basic services">
+      <option name="closed" value="true" />
+      <created>1722584474436</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722584474436</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
+    <MESSAGE value="add basic services" />
+    <option name="LAST_COMMIT_MESSAGE" value="add basic services" />
   </component>
 </project>
