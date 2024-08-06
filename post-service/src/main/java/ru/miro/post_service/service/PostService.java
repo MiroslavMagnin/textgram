@@ -1,8 +1,10 @@
 package ru.miro.post_service.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.miro.post_service.dto.PostDTO;
@@ -12,6 +14,7 @@ import ru.miro.post_service.mapper.PostMapper;
 import ru.miro.post_service.model.Post;
 import ru.miro.post_service.repository.PostRepository;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -19,10 +22,12 @@ import java.util.stream.Collectors;
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
+@Slf4j
 public class PostService {
 
     private final PostRepository postRepository;
     private final PostMapper postMapper;
+    private final KafkaTemplate<String, Object> kafkaTemplate;
 
     @Cacheable(cacheNames = "posts")
     public List<PostDTO> findAll() {
@@ -39,6 +44,10 @@ public class PostService {
     public void create(PostDTO postDTO) {
         // Get postDTO, map to entity Post, add createdAt and updatedAt timestamp
         postRepository.save(enrichCreatedPost(postMapper.toEntity(postDTO)));
+
+        // Kafka and Logs
+        kafkaTemplate.send("posts", postDTO);
+        log.info("Send to kafka the post: " + postDTO.toString());
     }
 
     @Transactional
@@ -61,12 +70,20 @@ public class PostService {
                 .build();
 
         postRepository.save(updatedPost);
+
+        // Kafka and Logs
+        kafkaTemplate.send("updated-posts", Arrays.asList(post.get(), updatedPost));
+        log.info("Updated the post: " + postDTO.toString());
     }
 
     @Transactional
     @CacheEvict(cacheNames = "posts", key = "#postId")
     public void delete(Long postId) {
         postRepository.deleteById(postId);
+
+        // Kafka and Logs
+        kafkaTemplate.send("deleted-post", postId);
+        log.info("Deleted the post with id=" + postId);
     }
 
     // Add createdAt and updatedAt timestamp for a post, which is being created

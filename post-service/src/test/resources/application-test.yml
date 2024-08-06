@@ -1,20 +1,16 @@
 server:
-  port: 9094
+  port: 8094
 
 spring:
   application:
     name: post-service
 
-  # Include a file with properties
-  config:
-    import: optional:file:.env[.properties]
-
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
-    username: ${POSTGRES_USERNAME}
-    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/textgram_db
+    username: postgres
+    password: postgres
 
   jpa:
     hibernate:
@@ -30,7 +26,7 @@ spring:
 
   # Broker
   kafka:
-    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    bootstrap-servers: kafka:9092
 
 # For JWT
 token:

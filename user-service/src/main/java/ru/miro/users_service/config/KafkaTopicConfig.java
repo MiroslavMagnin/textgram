@@ -10,7 +10,7 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic healthDataTopic() {
-        return TopicBuilder.name("healthData")
+        return TopicBuilder.name("name")
                 .build();
     }
 

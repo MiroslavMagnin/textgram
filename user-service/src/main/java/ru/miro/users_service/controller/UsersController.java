@@ -8,7 +8,9 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import ru.miro.users_service.dto.UserDTO;
 import ru.miro.users_service.exception.UserNotCreatedException;
+import ru.miro.users_service.model.Follower;
 import ru.miro.users_service.model.User;
+import ru.miro.users_service.service.FollowersService;
 import ru.miro.users_service.service.UsersService;
 import ru.miro.users_service.util.UserDTOValidator;
 
@@ -21,18 +23,22 @@ public class UsersController {
 
     private final UsersService usersService;
     private final UserDTOValidator userDTOValidator;
+    private final FollowersService followersService;
 
-    @GetMapping()
+    @GetMapping
+    @ResponseStatus(HttpStatus.FOUND)
     public List<User> getUsers() {
         return usersService.findAll();
     }
 
     @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.FOUND)
     public User getUser(@PathVariable("id") long id) {
         return usersService.findOne(id);
     }
 
     @GetMapping("/getUserByEmail/{email}")
+    @ResponseStatus(HttpStatus.FOUND)
     public User getUser(@PathVariable("email") String email) {
         return usersService.findOne(email);
     }
@@ -61,6 +67,7 @@ public class UsersController {
     }
 
     @PatchMapping("/{id}/update")
+    @ResponseStatus(HttpStatus.OK)
     public HttpStatus updateUser(@PathVariable("id") long id,
                                  @RequestBody UserDTO userDTO) {
         usersService.update(id, userDTO);
@@ -68,8 +75,28 @@ public class UsersController {
     }
 
     @DeleteMapping("/{id}/delete")
+    @ResponseStatus(HttpStatus.OK)
     public HttpStatus deleteUser(@PathVariable("id") long id) {
         usersService.delete(id);
+        return HttpStatus.OK;
+    }
+
+    @GetMapping("/get-followers/{id}")
+    @ResponseStatus(HttpStatus.FOUND)
+    public List<Follower> getFollowers(@PathVariable long id) {
+        return usersService.findOne(id).getFollowers();
+    }
+
+    @GetMapping("/get-following/{id}")
+    @ResponseStatus(HttpStatus.FOUND)
+    public List<Follower> getFollowing(@PathVariable long id) {
+        return usersService.findOne(id).getFollowing();
+    }
+
+    @PostMapping("/follow")
+    @ResponseStatus(HttpStatus.OK)
+    public HttpStatus follow(@RequestParam("from") long from, @RequestParam("to") long to) {
+        followersService.save(from, to);
         return HttpStatus.OK;
     }
 

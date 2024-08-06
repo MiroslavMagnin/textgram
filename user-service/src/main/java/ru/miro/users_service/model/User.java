@@ -1,6 +1,6 @@
 package ru.miro.users_service.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
@@ -11,6 +11,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -18,6 +19,10 @@ import java.time.LocalDate;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id"
+)
 public class User {
 
     @Id
@@ -43,6 +48,12 @@ public class User {
     @Column(name = "password")
     @NotNull(message = "The password shouldn't be empty")
     private String password;
+
+    @OneToMany(mappedBy = "to")
+    private List<Follower> followers;
+
+    @OneToMany(mappedBy = "from")
+    private List<Follower> following;
 
     @Enumerated(EnumType.STRING)
     private Role role;

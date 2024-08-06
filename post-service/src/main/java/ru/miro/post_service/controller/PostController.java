@@ -1,8 +1,9 @@
 package ru.miro.post_service.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/post")
 @RequiredArgsConstructor
-@Slf4j
 public class PostController {
 
     private final PostService postService;
@@ -35,7 +35,7 @@ public class PostController {
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public HttpStatus create(@RequestBody PostDTO postDTO, BindingResult bindingResult) {
+    public HttpStatus create(@Valid @RequestBody PostDTO postDTO, BindingResult bindingResult) {
         // If the postDTO contains errors, make the error message and throw not created exception
         if (bindingResult.hasErrors()) {
             StringBuilder errorMessage = new StringBuilder();
@@ -52,13 +52,12 @@ public class PostController {
         }
 
         postService.create(postDTO);
-        log.info("Created a new post: " + postDTO.toString());
         return HttpStatus.CREATED;
     }
 
     @PatchMapping("/update")
     @ResponseStatus(HttpStatus.OK)
-    public HttpStatus update(@RequestBody PostDTO postDTO, BindingResult bindingResult) {
+    public HttpStatus update(@Valid @RequestBody PostDTO postDTO, BindingResult bindingResult) {
         // If the postDTO contains errors, make the error message and throw not updated exception
         if (bindingResult.hasErrors()) {
             StringBuilder errorMessage = new StringBuilder();
@@ -75,7 +74,6 @@ public class PostController {
         }
 
         postService.update(postDTO);
-        log.info("Updated the post: " + postDTO.toString());
         return HttpStatus.OK;
     }
 

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: users-service
+    name: user-service
 
   config:
     import: optional:file:.env[.properties]
@@ -26,7 +26,7 @@ spring:
 
   # Broker
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
 
 # For JWT
 token:

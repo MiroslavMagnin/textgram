@@ -21,27 +21,27 @@ public class GatewayConfig {
         return builder.routes()
 
                 .route("auth-service", r -> r.path("/auth/**")
-                        .uri("http://localhost:8090")) // http://auth:8090
+                        .uri("http://auth:8090")) // http://localhost:8090
 
                 .route("user-service", r -> r.path("/user/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://localhost:8091")) // http://user:8091
+                        .uri("http://user:8091")) // http://localhost:8091
 
                 .route("notification-service", r -> r.path("/notification/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://localhost:8092")) // http://notification:8092
+                        .uri("http://notification:8092")) // http://localhost:8092
 
                 .route("analytics-service", r -> r.path("/analytics/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://localhost:8093")) // http://analytcis:8093
+                        .uri("http://analytcis:8093")) // http://localhost:8093
 
                 .route("post-service", r -> r.path("/post/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://localhost:8094")) // http://post:8094
+                        .uri("http://post:8094")) // http://localhost:8094
 
                 .route("feed-service", r -> r.path("/feed/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://localhost:8095")) // http://feed:8095
+                        .uri("http://feed:8095")) // http://localhost:8095
 
                 .build();
     }
