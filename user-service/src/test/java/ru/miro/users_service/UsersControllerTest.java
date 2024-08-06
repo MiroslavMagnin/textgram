@@ -61,7 +61,7 @@ class UsersControllerTest {
     void getUserById() throws Exception {
 
         User user = User.builder()
-                .id(15L)
+                .userId(15L)
                 .name("Ivan")
                 .birthDate(LocalDate.of(2005,7,8))
                 .email("test@mail.ru")

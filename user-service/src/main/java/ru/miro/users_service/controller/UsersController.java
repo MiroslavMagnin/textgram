@@ -15,6 +15,7 @@ import ru.miro.users_service.service.UsersService;
 import ru.miro.users_service.util.UserDTOValidator;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/user")
@@ -97,6 +98,20 @@ public class UsersController {
     @ResponseStatus(HttpStatus.OK)
     public HttpStatus follow(@RequestParam("from") long from, @RequestParam("to") long to) {
         followersService.save(from, to);
+        return HttpStatus.OK;
+    }
+
+    @DeleteMapping("/unfollow")
+    @ResponseStatus(HttpStatus.OK)
+    public HttpStatus unfollow(@RequestParam("from") long from, @RequestParam("to") long to) {
+        followersService.unfollow(from, to);
+        return HttpStatus.OK;
+    }
+
+    @DeleteMapping("/unfollow-by-follower-id")
+    @ResponseStatus(HttpStatus.OK)
+    public HttpStatus unfollowByFollowerId(@RequestParam("followerId") long followerId) {
+        followersService.unfollow(followerId);
         return HttpStatus.OK;
     }
 

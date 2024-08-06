@@ -1,9 +1,6 @@
 package ru.miro.users_service.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,22 +15,20 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id"
-)
 public class Follower implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long followId;
 
     @ManyToOne
     @JoinColumn(name = "from_user")
+    @JsonIgnoreProperties(value = {"password", "followers", "following", "createdAt", "updatedAt", "role", "birthDate"})
     private User from;
 
     @ManyToOne
     @JoinColumn(name = "to_user")
+    @JsonIgnoreProperties(value = {"password", "followers", "following", "createdAt", "updatedAt", "role", "birthDate"})
     private User to;
 
 }

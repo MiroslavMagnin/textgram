@@ -4,41 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="add redis (cache to post-service)">
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/miro/notification_service/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/miro/notification_service/dto/PostDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/miro/notification_service/kafka/KafkaListeners.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/BeanConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-service/src/test/java/ru/miro/post_service/PostServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/repository/FollowersRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/FollowersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca/storage_v2/_src_/database/textgram_db.mTFrew/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca/storage_v2/_src_/database/textgram_db.mTFrew/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="add init following system">
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotCreatedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotUnfollowed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/analytics-service/src/main/java/ru/miro/analytics_service/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/UsersServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/UsersServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/notification_service/auth_service/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/test/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaTopicConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/FollowersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/FollowersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/resources/application-test.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +288,7 @@
       <workItem from="1722570559942" duration="12736000" />
       <workItem from="1722826300425" duration="7254000" />
       <workItem from="1722848188695" duration="9276000" />
-      <workItem from="1722913937619" duration="5783000" />
+      <workItem from="1722913937619" duration="10262000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -347,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722832636960</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add init following system">
+      <option name="closed" value="true" />
+      <created>1722919854139</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722919854140</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +351,7 @@
     <MESSAGE value="Init commit" />
     <MESSAGE value="add basic services" />
     <MESSAGE value="add redis (cache to post-service)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add redis (cache to post-service)" />
+    <MESSAGE value="add init following system" />
+    <option name="LAST_COMMIT_MESSAGE" value="add init following system" />
   </component>
 </project>
