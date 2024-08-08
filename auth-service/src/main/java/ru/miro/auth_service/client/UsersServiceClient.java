@@ -16,7 +16,7 @@ public interface UsersServiceClient {
     @PostMapping("/user/add")
     ResponseEntity<HttpStatus> add(@RequestBody SignUpRequest request);
 
-    @GetMapping("/user/getUserByEmail/{email}")
+    @GetMapping("/user/get-user-by-email/{email}")
     ResponseEntity<UserDTO> getUserByEmail(@PathVariable("email") String email);
 
 }

@@ -27,18 +27,18 @@ public class UsersController {
     private final FollowersService followersService;
 
     @GetMapping
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     public List<User> getUsers() {
         return usersService.findAll();
     }
 
-    @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
+    @GetMapping("/get-user-by-id/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public User getUser(@PathVariable("id") long id) {
         return usersService.findOne(id);
     }
 
-    @GetMapping("/getUserByEmail/{email}")
+    @GetMapping("/get-user-by-email/{email}")
     @ResponseStatus(HttpStatus.OK)
     public User getUserByEmail(@PathVariable("email") String email) {
         return usersService.findOne(email);
@@ -83,13 +83,13 @@ public class UsersController {
     }
 
     @GetMapping("/get-followers/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     public List<Follower> getFollowers(@PathVariable long id) {
         return usersService.findOne(id).getFollowers();
     }
 
     @GetMapping("/get-following/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     public List<Follower> getFollowing(@PathVariable long id) {
         return usersService.findOne(id).getFollowing();
     }

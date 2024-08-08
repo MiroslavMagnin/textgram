@@ -3,13 +3,15 @@ package ru.miro.post_service.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
+import ru.miro.post_service.client.UserClient;
 import ru.miro.post_service.dto.PostDTO;
+import ru.miro.post_service.model.User;
 import ru.miro.post_service.exception.PostNotCreatedException;
 import ru.miro.post_service.exception.PostNotUpdatedException;
+import ru.miro.post_service.model.Follower;
 import ru.miro.post_service.service.PostService;
 
 import java.util.List;
@@ -20,6 +22,7 @@ import java.util.List;
 public class PostController {
 
     private final PostService postService;
+    private final UserClient userClient;
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
@@ -27,10 +30,20 @@ public class PostController {
         return postService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get-post-by-id/{id}")
     @ResponseStatus(HttpStatus.FOUND)
     public PostDTO findOne(@PathVariable("id") Long postId) {
         return postService.findOne(postId);
+    }
+
+    @GetMapping("/get-following-posts/{id}")
+    public void findAllFollowingPosts(@PathVariable("id") Long userId) { // return List<PostDTO>
+        User user = userClient.getUserById(userId);
+
+        System.out.println(user.toString());
+        List<Follower> following = user.getFollowing();
+        following.forEach(i -> System.out.println(i.getTo()));
+
     }
 
     @PostMapping("/create")

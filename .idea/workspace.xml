@@ -4,23 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="complete following system">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/client/TokenClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/TokenType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/JwtService.java" afterDir="false" />
+    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="continue to redo jwt-auth [chaos]">
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/client/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/FeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Follower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/UsersServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/UsersServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/PostServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/PostServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/BeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/jwt/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/test/java/ru/miro/post_service/PostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/test/java/ru/miro/post_service/PostServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UserServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/client/TokenClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/jwt/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/CustomUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/JwtAuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/JwtService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +50,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,6 +78,7 @@
     "Docker.docker-compose.yml.auth: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.gateway: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.post: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.user: Compose Deployment.executor": "Run",
@@ -68,6 +87,8 @@
     "JUnit.PostServiceTest.createNormalPost.executor": "Run",
     "JUnit.PostServiceTest.createWrongPost.executor": "Run",
     "JUnit.PostServiceTest.executor": "Run",
+    "JUnit.PostServiceTest.testUserClient.executor": "Run",
+    "JUnit.PostServiceTest.testUserDeserialization.executor": "Run",
     "JUnit.PostServiceTest.updateNormalPost.executor": "Run",
     "JUnit.PostServiceTest.updateWrongPost.executor": "Run",
     "JUnit.UsersControllerTest.executor": "Run",
@@ -123,11 +144,11 @@
       <recent name="M:\SpringProjects\textgram\analytics-service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.miro.post_service.model" />
+      <recent name="ru.miro.post_service.dto" />
       <recent name="ru.miro.users_service.config" />
       <recent name="ru.miro.users_service.model" />
       <recent name="ru.miro.auth_service.model" />
-      <recent name="ru.miro.notification_service.config" />
-      <recent name="ru.miro.post_service.config" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -144,7 +165,55 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.gateway: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="PostServiceTest.testUserClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="post-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.miro.post_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.miro.post_service" />
+      <option name="MAIN_CLASS_NAME" value="ru.miro.post_service.PostServiceTest" />
+      <option name="METHOD_NAME" value="testUserClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceTest.testUserDeserialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="post-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.miro.post_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.miro.post_service" />
+      <option name="MAIN_CLASS_NAME" value="ru.miro.post_service.PostServiceTest" />
+      <option name="METHOD_NAME" value="testUserDeserialization" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceTest.updateWrongPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="post-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.miro.post_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.miro.post_service" />
+      <option name="MAIN_CLASS_NAME" value="ru.miro.post_service.PostServiceTest" />
+      <option name="METHOD_NAME" value="updateWrongPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnalyticsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="analytics-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.analytics_service.AnalyticsServiceApplication" />
@@ -208,51 +277,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.auth: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.post: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="auth" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.gateway: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="gateway" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="postgres" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.user: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="user" />
+              <option value="post" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -261,11 +291,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.gateway: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.auth: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.user: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.post: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="JUnit.PostServiceTest.testUserClient" />
+      <item itemvalue="JUnit.PostServiceTest.testUserDeserialization" />
+      <item itemvalue="JUnit.PostServiceTest.updateWrongPost" />
       <item itemvalue="Spring Boot.PostServiceApplication" />
       <item itemvalue="Spring Boot.AnalyticsServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
@@ -276,11 +306,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.gateway: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.user: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.auth: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="JUnit.PostServiceTest.testUserClient" />
+        <item itemvalue="JUnit.PostServiceTest.updateWrongPost" />
+        <item itemvalue="JUnit.PostServiceTest.testUserDeserialization" />
+        <item itemvalue="Docker.docker-compose.yml.post: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722919854140</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="continue to redo jwt-auth [chaos]">
+      <option name="closed" value="true" />
+      <created>1723099058089</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723099058090</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,6 +399,7 @@
     <MESSAGE value="add basic services" />
     <MESSAGE value="add redis (cache to post-service)" />
     <MESSAGE value="add init following system" />
-    <option name="LAST_COMMIT_MESSAGE" value="add init following system" />
+    <MESSAGE value="continue to redo jwt-auth [chaos]" />
+    <option name="LAST_COMMIT_MESSAGE" value="continue to redo jwt-auth [chaos]" />
   </component>
 </project>

@@ -9,6 +9,13 @@ spring:
   config:
     import: optional:file:.env[.properties]
 
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            logger-level: full
+
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -34,9 +41,4 @@ spring:
   # Broker
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
-
-# For JWT
-token:
-  signing:
-    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
 
