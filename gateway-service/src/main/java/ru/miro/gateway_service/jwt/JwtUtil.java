@@ -12,13 +12,14 @@ import javax.crypto.SecretKey;
 public class JwtUtil {
 
     @Value("${token.signing.key}")
-    public static final String SECRET = "413F4428472B4B6250655368566D5970337336763979244226452948404D6351";
+    public static final String SECRET = "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970";
 
     public void validateToken(final String token) {
         Jwts.parser()
                 .verifyWith(getSigningKey())
                 .build()
-                .parseSignedClaims(token);
+                .parseSignedClaims(token)
+                .getPayload();
     }
 
     private SecretKey getSigningKey() {

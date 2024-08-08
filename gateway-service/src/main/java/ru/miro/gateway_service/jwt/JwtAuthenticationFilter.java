@@ -41,6 +41,7 @@ public class JwtAuthenticationFilter implements GatewayFilter {
                 return onError(exchange);
             }
         }
+
         return chain.filter(exchange);
     }
 

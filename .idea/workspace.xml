@@ -5,37 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="complete following system">
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/TokenType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/repository/TokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/LogoutService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/utils/AppAuditAware.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/client/TokenClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/CustomUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/CustomErrorDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/CustomErrorDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/FeignConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/FeignConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/TokenDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/TokenDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SignUpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SigninRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SigninRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/ru/miro/gateway_service/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UserServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -104,7 +89,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "M:/SpringProjects/textgram/auth-service/src/main/java",
+    "last_opened_file_path": "M:/SpringProjects/textgram/user-service/src/main/java/ru/miro/users_service/service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,20 +113,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="M:\SpringProjects\textgram\user-service\src\main\java\ru\miro\users_service\service" />
       <recent name="M:\SpringProjects\textgram\auth-service\src\main\java" />
       <recent name="M:\SpringProjects\textgram\notification-service\src\main\java\ru\miro\notification_service" />
       <recent name="M:\SpringProjects\textgram\post-service" />
       <recent name="M:\SpringProjects\textgram\post-service\src\main\java\ru\miro\post_service\config" />
-      <recent name="M:\SpringProjects\textgram\post-service\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="M:\SpringProjects\textgram\analytics-service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.miro.users_service.config" />
+      <recent name="ru.miro.users_service.model" />
       <recent name="ru.miro.auth_service.model" />
       <recent name="ru.miro.notification_service.config" />
       <recent name="ru.miro.post_service.config" />
-      <recent name="ru.miro.post_service.kafka" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -158,7 +144,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.user: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.gateway: Compose Deployment">
     <configuration name="AnalyticsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="analytics-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.analytics_service.AnalyticsServiceApplication" />
@@ -290,9 +276,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.gateway: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.user: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.auth: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.gateway: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>

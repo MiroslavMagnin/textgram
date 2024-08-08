@@ -43,4 +43,6 @@ public class UserDTO {
     @NotNull(message = "The password shouldn't be empty")
     private String password;
 
+    private Role role;
+
 }
