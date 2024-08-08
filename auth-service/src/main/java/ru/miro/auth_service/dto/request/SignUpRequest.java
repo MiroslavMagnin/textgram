@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.Getter;
 
 import java.time.LocalDate;
 
@@ -26,11 +26,5 @@ public class SignUpRequest {
 
     @NotNull(message = "The password shouldn't be empty")
     private String password;
-
-    @Min(value = 0, message = "The weight should be greater than 0")
-    private Integer weight;
-
-    @Min(value = 0, message = "The height should be greater than 0")
-    private Integer height;
 
 }

@@ -1,6 +1,6 @@
 package ru.miro.auth_service.dto.request;
 
-import lombok.*;
+import lombok.Getter;
 
 @Getter
 public class SigninRequest {

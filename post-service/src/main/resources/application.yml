@@ -27,6 +27,9 @@ spring:
   data:
     jdbc:
       dialect: postgresql
+    redis:
+      host: redis
+      port: 6379
 
   # Broker
   kafka:

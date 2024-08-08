@@ -1,9 +1,7 @@
 package ru.miro.auth_service.model;
 
-public enum Role {
+public enum TokenType {
 
-    USER,
-
-    ADMIN;
+    BEARER
 
 }

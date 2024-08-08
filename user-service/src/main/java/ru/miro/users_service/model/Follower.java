@@ -19,6 +19,7 @@ public class Follower implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "follow_id")
     private Long followId;
 
     @ManyToOne

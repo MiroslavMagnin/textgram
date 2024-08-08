@@ -39,8 +39,8 @@ public class UsersController {
     }
 
     @GetMapping("/getUserByEmail/{email}")
-    @ResponseStatus(HttpStatus.FOUND)
-    public User getUser(@PathVariable("email") String email) {
+    @ResponseStatus(HttpStatus.OK)
+    public User getUserByEmail(@PathVariable("email") String email) {
         return usersService.findOne(email);
     }
 

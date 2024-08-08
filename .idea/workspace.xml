@@ -4,16 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="add init following system">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotCreatedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotUnfollowed.java" afterDir="false" />
+    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="complete following system">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/repository/TokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/LogoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/utils/AppAuditAware.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4e3b32e-9841-49be-85f0-25e906fdd4ca.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/CustomErrorDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/client/CustomErrorDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/FeignConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/FeignConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/TokenDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/TokenDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SignUpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SigninRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/dto/request/SigninRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/miro/auth_service/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/FollowersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/FollowersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,70 +70,75 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-compose.yml.kafka: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.redis: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.zookeeper: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostServiceTest.createNormalPost.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostServiceTest.createWrongPost.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostServiceTest.updateNormalPost.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostServiceTest.updateWrongPost.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsersControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UsersControllerTest.getUsers.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.textgram [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PostServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UsersServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;M:/SpringProjects/textgram/notification-service/src/main/java/ru/miro/notification_service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml.auth: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.gateway: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.user: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.zookeeper: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.PostServiceTest.createNormalPost.executor": "Run",
+    "JUnit.PostServiceTest.createWrongPost.executor": "Run",
+    "JUnit.PostServiceTest.executor": "Run",
+    "JUnit.PostServiceTest.updateNormalPost.executor": "Run",
+    "JUnit.PostServiceTest.updateWrongPost.executor": "Run",
+    "JUnit.UsersControllerTest.executor": "Run",
+    "JUnit.UsersControllerTest.getUsers.executor": "Run",
+    "Maven.textgram [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
+    "Spring Boot.GatewayServerApplication.executor": "Run",
+    "Spring Boot.PostServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "Spring Boot.UsersServiceApplication.executor": "Run",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "M:/SpringProjects/textgram/auth-service/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;java.sql.Driver&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "java.sql.Driver",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="M:\SpringProjects\textgram\auth-service\src\main\java" />
       <recent name="M:\SpringProjects\textgram\notification-service\src\main\java\ru\miro\notification_service" />
       <recent name="M:\SpringProjects\textgram\post-service" />
       <recent name="M:\SpringProjects\textgram\post-service\src\main\java\ru\miro\post_service\config" />
       <recent name="M:\SpringProjects\textgram\post-service\src\test\resources" />
-      <recent name="M:\SpringProjects\textgram\feed-service\src\main\java\ru\miro\feed_service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="M:\SpringProjects\textgram\analytics-service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.miro.auth_service.model" />
       <recent name="ru.miro.notification_service.config" />
       <recent name="ru.miro.post_service.config" />
       <recent name="ru.miro.post_service.kafka" />
@@ -130,39 +158,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
-    <configuration name="PostServiceTest.updateNormalPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="post-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.miro.post_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.miro.post_service" />
-      <option name="MAIN_CLASS_NAME" value="ru.miro.post_service.PostServiceTest" />
-      <option name="METHOD_NAME" value="updateNormalPost" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostServiceTest.updateWrongPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="post-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.miro.post_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.miro.post_service" />
-      <option name="MAIN_CLASS_NAME" value="ru.miro.post_service.PostServiceTest" />
-      <option name="METHOD_NAME" value="updateWrongPost" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Docker.docker-compose.yml.user: Compose Deployment">
     <configuration name="AnalyticsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="analytics-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.miro.analytics_service.AnalyticsServiceApplication" />
@@ -226,12 +222,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.auth: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="kafka" />
+              <option value="auth" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -239,12 +235,38 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.redis: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.gateway: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="redis" />
+              <option value="gateway" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.user: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="user" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -253,11 +275,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml.gateway: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.auth: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.user: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.redis: Compose Deployment" />
-      <item itemvalue="JUnit.PostServiceTest.updateNormalPost" />
-      <item itemvalue="JUnit.PostServiceTest.updateWrongPost" />
       <item itemvalue="Spring Boot.PostServiceApplication" />
       <item itemvalue="Spring Boot.AnalyticsServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
@@ -268,11 +290,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.user: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.auth: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.gateway: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.redis: Compose Deployment" />
-        <item itemvalue="JUnit.PostServiceTest.updateWrongPost" />
-        <item itemvalue="JUnit.PostServiceTest.updateNormalPost" />
       </list>
     </recent_temporary>
   </component>
@@ -289,6 +311,7 @@
       <workItem from="1722826300425" duration="7254000" />
       <workItem from="1722848188695" duration="9276000" />
       <workItem from="1722913937619" duration="10262000" />
+      <workItem from="1723089195221" duration="3426000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
