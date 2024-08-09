@@ -22,7 +22,6 @@ import java.util.List;
 public class PostController {
 
     private final PostService postService;
-    private final UserClient userClient;
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
@@ -37,13 +36,8 @@ public class PostController {
     }
 
     @GetMapping("/get-following-posts/{id}")
-    public void findAllFollowingPosts(@PathVariable("id") Long userId) { // return List<PostDTO>
-        User user = userClient.getUserById(userId);
-
-        System.out.println(user.toString());
-        List<Follower> following = user.getFollowing();
-        following.forEach(i -> System.out.println(i.getTo()));
-
+    public List<PostDTO> findAllFollowingPosts(@PathVariable("id") Long userId) {
+        return postService.findAllFollowingPosts(userId);
     }
 
     @PostMapping("/create")

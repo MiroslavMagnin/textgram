@@ -2,6 +2,7 @@ package ru.miro.post_service.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -12,6 +13,7 @@ import java.util.List;
 
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class User implements Serializable {

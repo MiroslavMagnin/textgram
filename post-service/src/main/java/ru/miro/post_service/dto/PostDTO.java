@@ -21,7 +21,7 @@ public class PostDTO implements Serializable {
     private String text; // Content of the post
 
     @NotNull(message = "The author of the post shouldn't be null")
-    private Long author; // The ID of the user, who wrote the post
+    private Long authorId; // The ID of the user, who wrote the post
 
     private Long createdAt;
     private Long updatedAt;

@@ -7,16 +7,17 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.miro.post_service.client.UserClient;
 import ru.miro.post_service.dto.PostDTO;
 import ru.miro.post_service.exception.PostNotFoundException;
 import ru.miro.post_service.exception.PostNotUpdatedException;
 import ru.miro.post_service.mapper.PostMapper;
+import ru.miro.post_service.model.Follower;
 import ru.miro.post_service.model.Post;
+import ru.miro.post_service.model.User;
 import ru.miro.post_service.repository.PostRepository;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -26,6 +27,7 @@ import java.util.stream.Collectors;
 public class PostService {
 
     private final PostRepository postRepository;
+    private final UserClient userClient;
     private final PostMapper postMapper;
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
@@ -37,6 +39,23 @@ public class PostService {
     @Cacheable(cacheNames = "posts", key = "#postId")
     public PostDTO findOne(Long postId) {
         return postRepository.findById(postId).map(postMapper::toDTO).orElseThrow(() -> new PostNotFoundException(postId));
+    }
+
+    public List<PostDTO> findAllFollowingPosts(Long userId) {
+        // Get user by feign client
+        User user = userClient.getUserById(userId);
+        log.info("Get user: " + user.toString());
+
+        // Get following list and create followingId list with only user id
+        List<Follower> following = user.getFollowing();
+        List<Long> followingId = new ArrayList<>();
+        following.forEach(i -> followingId.add(i.getTo().getUserId()));
+
+        // Log
+        following.forEach(i -> log.info("Get following list - followId - " + i.getFollowId()));
+        followingId.forEach(i -> log.info("Get followingId list - userId - " + i));
+
+        return postRepository.findByAuthorIdIn(followingId).stream().map(postMapper::toDTO).collect(Collectors.toList());
     }
 
     @Transactional
@@ -64,7 +83,7 @@ public class PostService {
         Post updatedPost = Post.builder()
                 .id(post.get().getId())
                 .text(postDTO.getText())
-                .author(post.get().getAuthor())
+                .authorId(post.get().getAuthorId())
                 .createdAt(post.get().getCreatedAt())
                 .updatedAt(System.currentTimeMillis())
                 .build();

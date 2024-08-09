@@ -35,8 +35,8 @@ spring:
     jdbc:
       dialect: postgresql
     redis:
-      host: redis
-      port: 6379
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
 
   # Broker
   kafka:
