@@ -70,9 +70,9 @@ class UsersControllerTest {
 
         when(usersService.findOne(15L)).thenReturn(user);
 
-        mockMvc.perform(get("/user/{id}", 15L))
+        mockMvc.perform(get("/user/get-user-by-id/{id}", 15L))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(15L))
+                .andExpect(jsonPath("$.userId").value(15L))
                 .andExpect(jsonPath("$.name").value("Ivan"))
                 .andExpect(jsonPath("$.birthDate").value("2005-07-08"))
                 .andExpect(jsonPath("$.email").value("test@mail.ru"))

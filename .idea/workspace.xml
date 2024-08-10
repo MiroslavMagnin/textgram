@@ -4,67 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="redo JWT-auth,add test get-following-posts">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/UserServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/config/BeanConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/controller/UsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/exception/ExceptionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/exception/FollowerNotCreatedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/exception/FollowerNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/exception/UserNotCreatedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/mapper/Mappable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/model/Follower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/repository/FollowersRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/repository/UsersRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/service/FollowersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/user_service/util/UserDTOValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/user_service/UsersControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="add get following posts, add redis cache to users-service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/dto/PostDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Follower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/ru/miro/post_service/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/test/java/ru/miro/post_service/PostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/test/java/ru/miro/post_service/PostServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/UserServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/BeanConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaProducerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/KafkaTopicConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/controller/UsersController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/dto/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/ExceptionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotCreatedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/FollowerNotUnfollowed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/UserNotCreatedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/exception/UserNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/mapper/Mappable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Follower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/repository/FollowersRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/repository/UsersRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/FollowersService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/service/UsersService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/miro/users_service/util/UserDTOValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/users_service/UsersControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/user_service/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/miro/user_service/UsersControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/resources/application-test.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +20,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -100,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Docker.docker-compose.yml.auth: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.docker-compose.yml.gateway: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.docker-compose.yml.kafka: Compose Deployment.executor&quot;: &quot;Run&quot;,
@@ -190,7 +136,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="JUnit.UsersControllerTest">
     <configuration name="PostServiceTest.testUserClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="post-service" />
       <extension name="coverage">
@@ -202,22 +148,6 @@
       <option name="PACKAGE_NAME" value="ru.miro.post_service" />
       <option name="MAIN_CLASS_NAME" value="ru.miro.post_service.PostServiceTest" />
       <option name="METHOD_NAME" value="testUserClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostServiceTest.testUserDeserialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="post-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.miro.post_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.miro.post_service" />
-      <option name="MAIN_CLASS_NAME" value="ru.miro.post_service.PostServiceTest" />
-      <option name="METHOD_NAME" value="testUserDeserialization" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -238,6 +168,24 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="UsersControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.miro.user_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.miro.user_service" />
+      <option name="MAIN_CLASS_NAME" value="ru.miro.user_service.UsersControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend-react/src/App.jsx" working-dir="$PROJECT_DIR$/frontend-react/src">
+      <method v="2" />
     </configuration>
     <configuration name="AnalyticsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="analytics-service" />
@@ -302,25 +250,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.post: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="post" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.post: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="JUnit.UsersControllerTest" />
       <item itemvalue="JUnit.PostServiceTest.testUserClient" />
-      <item itemvalue="JUnit.PostServiceTest.testUserDeserialization" />
       <item itemvalue="JUnit.PostServiceTest.updateWrongPost" />
+      <item itemvalue="Node.js.App.jsx" />
       <item itemvalue="Spring Boot.PostServiceApplication" />
       <item itemvalue="Spring Boot.AnalyticsServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
@@ -331,11 +266,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UsersControllerTest" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Node.js.App.jsx" />
         <item itemvalue="JUnit.PostServiceTest.testUserClient" />
         <item itemvalue="JUnit.PostServiceTest.updateWrongPost" />
-        <item itemvalue="JUnit.PostServiceTest.testUserDeserialization" />
-        <item itemvalue="Docker.docker-compose.yml.post: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -353,7 +288,8 @@
       <workItem from="1722848188695" duration="9276000" />
       <workItem from="1722913937619" duration="10262000" />
       <workItem from="1723089195221" duration="3426000" />
-      <workItem from="1723174998232" duration="6655000" />
+      <workItem from="1723174998232" duration="11716000" />
+      <workItem from="1723262825058" duration="4092000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -411,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723112612647</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add get following posts, add redis cache to users-service">
+      <option name="closed" value="true" />
+      <created>1723182339085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723182339085</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,6 +379,7 @@
     <MESSAGE value="add init following system" />
     <MESSAGE value="continue to redo jwt-auth [chaos]" />
     <MESSAGE value="redo JWT-auth,add test get-following-posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="redo JWT-auth,add test get-following-posts" />
+    <MESSAGE value="add get following posts, add redis cache to users-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="add get following posts, add redis cache to users-service" />
   </component>
 </project>

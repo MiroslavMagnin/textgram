@@ -11,7 +11,7 @@ spring:
   # Database (test)
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/textgram_db
+    url: jdbc:postgresql://localhost:5437/textgram_db
     username: postgres
     password: postgres
 
@@ -23,10 +23,14 @@ spring:
   data:
     jdbc:
       dialect: postgresql
+    redis:
+      host: redis
+      port: 6379
 
   # Broker
   kafka:
     bootstrap-servers: kafka:9092
+
 
 # For JWT
 token:
