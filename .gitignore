@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+
+/frontend-react/node_modules/
