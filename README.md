@@ -9,6 +9,7 @@
 - Kafka
 - Redis
 - Docker
+- React
 
 # 😯 About the project
 This is my implementation of Twitter. In the app, you will be able to register a new user,
@@ -17,7 +18,9 @@ publish new posts, follow to other users and get notifications about new posts
 This application includes 5 microservices: 
 - gateway-service
 - auth-service
-- users-service
+- user-service
+- post-service
+- feed-service
 - notification-service
 - analytics-service
 
@@ -26,5 +29,6 @@ This application includes 5 microservices:
 - RESTful API
 - Security: user authentication with JWT
 - Kafka and Redis
+- Frontend with React
 
 # 🧑‍🚀️ Explore REST API
