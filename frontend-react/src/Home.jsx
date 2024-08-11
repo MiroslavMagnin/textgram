@@ -3,7 +3,7 @@ import Header from "./components/Header/Header.jsx";
 import Button from "./components/Button/Button.jsx";
 
 export default function Home() {
-  const [paragraphContent, setParagraphContent] = useState("Text on the p");
+  const [paragraphContent, setParagraphContent] = useState("Whereas recognition of the inherent dignity");
 
   function handleClick(type) {
     setParagraphContent(type);
@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <h3>Text</h3>
+        <h1>Text</h1>
 
         <Button
           onClick={() => handleClick("log")}

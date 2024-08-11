@@ -19,6 +19,13 @@ header {
   justify-content: center;
 }
 
+#text-logo {
+  padding: 0.1rem 0.5rem;
+
+  color: rgba(255, 255, 255, 0.87);
+  margin: 0 1rem;
+}
+
 .header-right-div {
   margin-right: 10rem;
   padding: 0.5rem;

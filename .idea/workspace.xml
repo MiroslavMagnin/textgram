@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="add frontend-react">
+    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="change README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/Routes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Button/Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,64 +54,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.docker-compose.yml.auth: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.gateway: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.post: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.user: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.zookeeper: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.PostServiceTest.createNormalPost.executor": "Run",
-    "JUnit.PostServiceTest.createWrongPost.executor": "Run",
-    "JUnit.PostServiceTest.executor": "Run",
-    "JUnit.PostServiceTest.testUserClient.executor": "Run",
-    "JUnit.PostServiceTest.testUserDeserialization.executor": "Run",
-    "JUnit.PostServiceTest.updateNormalPost.executor": "Run",
-    "JUnit.PostServiceTest.updateWrongPost.executor": "Run",
-    "JUnit.UsersControllerTest.executor": "Run",
-    "JUnit.UsersControllerTest.getUsers.executor": "Run",
-    "Maven.textgram [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.GatewayServerApplication.executor": "Run",
-    "Spring Boot.PostServiceApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "Spring Boot.UsersServiceApplication.executor": "Run",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "M:/SpringProjects/textgram/user-service/src/main/java/ru/miro/users_service/service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "ts.external.directory.path": "M:\\Program Files\\IntelliJ IDEA 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker-compose.yml.auth: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.gateway: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.kafka: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.post: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.redis: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.user: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.zookeeper: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.createNormalPost.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.createWrongPost.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.testUserClient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.testUserDeserialization.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.updateNormalPost.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostServiceTest.updateWrongPost.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsersControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsersControllerTest.getUsers.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.textgram [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PostServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UsersServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;M:/SpringProjects/textgram/user-service/src/main/java/ru/miro/users_service/service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;M:\\Program Files\\IntelliJ IDEA 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "java.sql.Driver",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;java.sql.Driver&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -289,7 +301,8 @@
       <workItem from="1722913937619" duration="10262000" />
       <workItem from="1723089195221" duration="3426000" />
       <workItem from="1723174998232" duration="11716000" />
-      <workItem from="1723262825058" duration="4914000" />
+      <workItem from="1723262825058" duration="4977000" />
+      <workItem from="1723379314668" duration="1388000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -371,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723291889328</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="change README.md">
+      <option name="closed" value="true" />
+      <created>1723292032064</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723292032064</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +419,7 @@
     <MESSAGE value="add get following posts, add redis cache to users-service" />
     <MESSAGE value="little changes" />
     <MESSAGE value="add frontend-react" />
-    <option name="LAST_COMMIT_MESSAGE" value="add frontend-react" />
+    <MESSAGE value="change README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="change README.md" />
   </component>
 </project>

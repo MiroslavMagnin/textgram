@@ -3,6 +3,8 @@ import SignUp from "./components/Sign/SignUp";
 import SignIn from "./components/Sign/SignIn";
 import { NotFoundPage } from "./components/NotFound/NotFoundPage";
 import Home from "./Home";
+import AboutPage from "./components/About/AboutPage";
+import ProfilePage from "./components/Profile/ProfilePage";
 
 export default function RoutesPage() {
   return (
@@ -11,6 +13,10 @@ export default function RoutesPage() {
         <Route path="/" element={<Home />} exact />
 
         <Route path="/home" element={<Home />} />
+
+        <Route path="/about" element={<AboutPage />} />
+
+        <Route path="/profile" element={<ProfilePage />} />
 
         <Route path="/signup" element={<SignUp />} />
 

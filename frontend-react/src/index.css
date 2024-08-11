@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "Rubik", sans-serif;
+  src: local("Rubik"),
+    url("./assets//fonts/Rubik-VariableFont_wght.ttf") format("ttf");
+  font-weight: 800;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1.5;
   font-weight: 500;
 
@@ -29,12 +36,16 @@ main {
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  padding: 0.1rem 0.5rem;
+  
+  color: rgba(255, 255, 255, 0.87);
+
+  font-weight: 800;
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  background-color: #636363;
+  border-radius: 10px;
 }
 
 body {
@@ -44,8 +55,22 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
+}
+
+p {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+ul {
+  margin: 0.2em 0 1em;
+  list-style-position: inside;
+}
+
+li {
+  font-size: 1.5em;
 }
 
 .control {
@@ -75,4 +100,3 @@ h1 {
     margin: 0.1em auto;
   }
 }
-

@@ -10,12 +10,13 @@ export default function Header() {
   return (
     <header>
       <div className="header-left-div">
-        {/* <h3>textgram</h3> */}
-        <img src={logo} alt={logoAlt} className="logo"></img>
+        <Link id="text-logo" to="/home">Textgram</Link>
+        {/* <img src={logo} alt={logoAlt} className="logo"></img> */}
       </div>
 
       <div className="header-right-div">
         <Link to="/home">Home</Link>
+        <Link to="/about">About</Link>
         <Link to="/signup">Sign Up</Link>
         <Link to="/signin">Sign In</Link>
       </div>

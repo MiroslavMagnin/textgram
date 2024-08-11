@@ -15,7 +15,7 @@
 This is my implementation of Twitter. In the app, you will be able to register a new user,
 publish new posts, follow to other users and get notifications about new posts
 
-This application includes 5 microservices: 
+This application includes 7 microservices: 
 - gateway-service
 - auth-service
 - user-service
