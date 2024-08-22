@@ -27,7 +27,7 @@
 }
 
 main {
-  margin: 5rem auto;
+  margin: 0;
   padding: 1rem;
   width: 60%;
   align-items: center;
@@ -37,7 +37,7 @@ main {
 
 a {
   padding: 0.1rem 0.5rem;
-  
+
   color: rgba(255, 255, 255, 0.87);
 
   font-weight: 800;
@@ -79,6 +79,13 @@ li {
   padding: 0.5rem 1rem;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 @media (prefers-color-scheme: light) {

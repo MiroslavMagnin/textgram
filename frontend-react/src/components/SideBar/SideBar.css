@@ -1,0 +1,33 @@
+.side-bar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.left-menu-item {
+  width: 80%;
+  text-align: center;
+}
+
+.left-menu-item-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-menu-item-a:hover {
+  border-radius: 5px;
+}
+
+.left-menu-item-icon {
+  margin: 0 1rem 0 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.left-menu-item-label {
+  margin: 0;
+  padding: 0;
+}

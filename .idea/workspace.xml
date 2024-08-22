@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="change README.md">
+    <list default="true" id="e2e3e4d9-333d-4ce6-89db-ef0905c4dc30" name="Changes" comment="update frontend-react">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-react/src/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/Routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Button/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-react/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +293,9 @@
       <workItem from="1723089195221" duration="3426000" />
       <workItem from="1723174998232" duration="11716000" />
       <workItem from="1723262825058" duration="4977000" />
-      <workItem from="1723379314668" duration="1388000" />
+      <workItem from="1723379314668" duration="1665000" />
+      <workItem from="1724298219268" duration="1176000" />
+      <workItem from="1724342110267" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -392,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723292032064</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update frontend-react">
+      <option name="closed" value="true" />
+      <created>1723386045235</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723386045235</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,6 +421,7 @@
     <MESSAGE value="little changes" />
     <MESSAGE value="add frontend-react" />
     <MESSAGE value="change README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="change README.md" />
+    <MESSAGE value="update frontend-react" />
+    <option name="LAST_COMMIT_MESSAGE" value="update frontend-react" />
   </component>
 </project>
