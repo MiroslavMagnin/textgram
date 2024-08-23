@@ -18,27 +18,29 @@ export default function SignUp() {
     <>
       <Header />
 
-      <main>
-        <div className="sign">
-          <h2>Sign In</h2>
+      <div className="page-layout">
+        <main>
+          <div className="sign">
+            <h2>Sign In</h2>
 
-          <hr/>
+            <hr />
 
-          <form>
-            <label htmlFor="email">Email: </label>
-            <input type="email" id="email" className="control" />
+            <form>
+              <label htmlFor="email">Email: </label>
+              <input type="email" id="email" className="control" />
 
-            <label htmlFor="password">Password: </label>
-            <input type="password" id="password" className="control" />
-            
-            <hr/>
+              <label htmlFor="password">Password: </label>
+              <input type="password" id="password" className="control" />
 
-            <Button disabled={hasError} isActive={!hasError}>
-              Sign Up!
-            </Button>
-          </form>
-        </div>
-      </main>
+              <hr />
+
+              <Button disabled={hasError} isActive={!hasError}>
+                Sign Up!
+              </Button>
+            </form>
+          </div>
+        </main>
+      </div>
     </>
   );
 }

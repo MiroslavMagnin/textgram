@@ -1,19 +1,18 @@
 .side-bar {
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 4rem;
   align-self: flex-start;
+  width: 10%;
 }
 
 .left-menu-item {
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
 
 .left-menu-item-a {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .left-menu-item-a:hover {
@@ -30,4 +29,10 @@
 .left-menu-item-label {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .side-bar {
+    display: none;
+  }
 }
