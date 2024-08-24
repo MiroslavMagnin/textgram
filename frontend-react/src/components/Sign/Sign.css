@@ -26,7 +26,7 @@
 
   border-radius: 20px;
   border: 4px solid transparent;
-  /* transition: border-color 0.25s; */
+  transition: border-color 0.25s;
   box-sizing: border-box;
 }
 
@@ -52,6 +52,27 @@
 
 .sign input.error {
   border-color: #b94d4d;
+}
+
+.wrongField {
+  font-size: 14px;
+  color: #c75252;
+  opacity: 0;
+  animation: appearance 0.25s forwards;
+}
+
+.show {
+  opacity: 1;
+  animation: appearance 0.25s backwards;
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1400px) {

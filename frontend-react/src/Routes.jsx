@@ -1,10 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignUp from "./components/Sign/SignUp";
-import SignIn from "./components/Sign/SignIn";
+import SignUpPage from "./components/Sign/SignUpPage.jsx";
+import SignInPage from "./components/Sign/SignInPage.jsx";
 import HomePage from "./HomePage";
 import { NotFoundPage } from "./components/NotFound/NotFoundPage";
 import AboutPage from "./components/About/AboutPage";
 import ProfilePage from "./components/Profile/ProfilePage";
+import FeedPage from "./components/Feed/FeedPage";
 
 export default function RoutesPage() {
   return (
@@ -14,13 +15,15 @@ export default function RoutesPage() {
 
         <Route path="/home" element={<HomePage />} />
 
+        <Route path="/feed" element={<FeedPage />} />
+
         <Route path="/about" element={<AboutPage />} />
 
         <Route path="/profile" element={<ProfilePage />} />
 
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUpPage />} />
 
-        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signin" element={<SignInPage />} />
 
         <Route path="/404" element={<NotFoundPage />} />
 

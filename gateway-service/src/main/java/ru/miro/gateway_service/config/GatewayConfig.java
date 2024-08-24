@@ -46,18 +46,4 @@ public class GatewayConfig {
                 .build();
     }
 
-    // CORS (cross-origin resource sharing)
-    @Bean
-    public CorsWebFilter corsWebFilter() {
-        CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.addAllowedOrigin("http://localhost:63342"); // frontend URL
-        corsConfig.addAllowedHeader("*");
-        corsConfig.addAllowedMethod("*");
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", corsConfig);
-
-        return new CorsWebFilter(source);
-    }
-
 }

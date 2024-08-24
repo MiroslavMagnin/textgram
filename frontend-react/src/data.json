@@ -1,0 +1,16 @@
+[
+  {
+    "link": "/home",
+    "label": "Home"
+  },
+
+  {
+    "link": "/feed",
+    "label": "Feed"
+  },
+
+  {
+    "link": "/about",
+    "label": "About"
+  }
+]

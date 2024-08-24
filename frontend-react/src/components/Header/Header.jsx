@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header>
       <div className="header-left-div">
-        <Link id="text-logo" to="/home">
+        <Link id="text-logo" to="/about">
           Textgram
         </Link>
         {/* <img src={logo} alt={logoAlt} className="logo"></img> */}
@@ -21,6 +21,9 @@ export default function Header() {
           <ul className="header__nav-list">
             <li className="header__nav-item">
               <Link to="/home">Home</Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/feed">Feed</Link>
             </li>
             <li className="header__nav-item">
               <Link to="/about">About</Link>
@@ -39,10 +42,6 @@ export default function Header() {
         >
           <MenuIcon fillColor={`rgba(255, 255, 255, 0.87)`} />
         </button>
-        {/* <Link to="/home">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/signin">Sign In</Link> */}
       </div>
     </header>
   );

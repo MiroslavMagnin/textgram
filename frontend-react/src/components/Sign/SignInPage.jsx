@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { useState } from "react";
 import Header from "../Header/Header";
 
-export default function SignUp() {
+export default function SignInPage() {
   const [name, setName] = useState("");
 
   const [hasError, setHasError] = useState(false);
