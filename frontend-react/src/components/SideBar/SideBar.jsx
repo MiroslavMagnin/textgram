@@ -48,6 +48,19 @@ export default function SideBar() {
                 </div>
                 <span className="left-menu-item-label">{links[2].label}</span>
               </Link>
+
+              <Link className="left-menu-item-a" to={links[3].link}>
+                <div className="left-menu-item-icon">
+                  <embed
+                    src={homeIcon}
+                    width="24"
+                    height="24"
+                    type="image/svg+xml"
+                    alt="Home Icon"
+                  />
+                </div>
+                <span className="left-menu-item-label">{links[3].label}</span>
+              </Link>
             </div>
           </div>
         </nav>

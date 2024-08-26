@@ -28,6 +28,8 @@ public class Post implements Serializable {
     @NotNull(message = "The author of the post shouldn't be null")
     private Long authorId; // The ID of the user, who wrote the post
 
+    private String authorName;
+
     private Long createdAt;
     private Long updatedAt;
 

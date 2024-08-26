@@ -1,0 +1,74 @@
+/* Actions */
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+
+  margin-top: 2rem;
+  gap: 1.5rem;
+
+  font-size: 1.3em;
+}
+
+.action-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 90%;
+
+  gap: 1.5rem;
+}
+
+.action-line__label {
+  text-align: left;
+  flex: 1;
+}
+
+.action-line__action {
+  text-align: left;
+  flex: 2;
+}
+
+/* Data */
+
+.profile-data {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+
+  margin-top: 2rem;
+  gap: 1.5rem;
+
+  font-size: 1.3em;
+}
+
+.profile-data__line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 90%;
+
+  gap: 1.5rem;
+}
+
+.profile-data__label {
+  text-align: left;
+  flex: 1;
+}
+
+.profile-data__text {
+  text-align: left;
+  flex: 2;
+}

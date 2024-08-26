@@ -1,14 +1,19 @@
 import Header from "../Header/Header";
+import "./NotFoundPage.css";
 
 export const NotFoundPage = () => {
   return (
     <>
       <Header />
 
-      <main>
-        <h1>This page is not found</h1>
-        <p>Maybe you have came to not there</p>
-      </main>
+      <div className="page-layout">
+        <main>
+          <h1>This page is not found</h1>
+          <div className="not-found">
+            <label>404</label>
+          </div>
+        </main>
+      </div>
     </>
   );
 };

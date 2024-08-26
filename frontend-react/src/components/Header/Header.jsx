@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import MenuIcon from "../../assets/icons/MenuIcon";
@@ -6,6 +6,12 @@ import MenuIcon from "../../assets/icons/MenuIcon";
 export default function Header() {
   const logoAlt = "Textgram logo";
   const [isOpen, setOpen] = useState();
+
+  const [isAuth, setAuth] = useState();
+  useEffect(() => {
+    let token = localStorage.getItem("token");
+    setAuth(token !== null);
+  });
 
   return (
     <header>
@@ -28,10 +34,16 @@ export default function Header() {
             <li className="header__nav-item">
               <Link to="/about">About</Link>
             </li>
-            <li className="header__nav-item">
+            <li
+              className="header__nav-item"
+              style={{ display: isAuth ? "none" : "block" }}
+            >
               <Link to="/signup">Sign Up</Link>
             </li>
-            <li className="header__nav-item">
+            <li
+              className="header__nav-item"
+              style={{ display: isAuth ? "none" : "block" }}
+            >
               <Link to="/signin">Sign In</Link>
             </li>
           </ul>

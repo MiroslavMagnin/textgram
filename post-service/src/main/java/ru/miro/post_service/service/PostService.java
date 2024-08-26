@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.miro.post_service.client.UserClient;
 import ru.miro.post_service.dto.PostDTO;
+import ru.miro.post_service.exception.PostNotCreatedException;
 import ru.miro.post_service.exception.PostNotFoundException;
 import ru.miro.post_service.exception.PostNotUpdatedException;
 import ru.miro.post_service.mapper.PostMapper;
@@ -61,6 +62,13 @@ public class PostService {
     @Transactional
     @CacheEvict(cacheNames = "posts", allEntries = true)
     public void create(PostDTO postDTO) {
+        User author = userClient.getUserById(postDTO.getAuthorId());
+        if (author == null) {
+            throw new PostNotCreatedException("Post is not created because the author with id=" +
+                    postDTO.getAuthorId() + " haven't found");
+        }
+        postDTO.setAuthorName(author.getName());
+
         // Get postDTO, map to entity Post, add createdAt and updatedAt timestamp
         postRepository.save(enrichCreatedPost(postMapper.toEntity(postDTO)));
 

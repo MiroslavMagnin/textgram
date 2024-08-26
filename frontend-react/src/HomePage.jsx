@@ -1,17 +1,8 @@
-import { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import Button from "./components/Button/Button.jsx";
 import SideBar from "./components/SideBar/SideBar.jsx";
 
 export default function HomePage() {
-  const [paragraphContent, setParagraphContent] = useState(
-    "Whereas recognition of the inherent dignity"
-  );
-
-  function handleClick(type) {
-    setParagraphContent(type);
-  }
-
   return (
     <>
       <Header />
@@ -20,32 +11,12 @@ export default function HomePage() {
         <SideBar />
 
         <main>
-          <h1>Text</h1>
-
-          <Button
-            onClick={() => handleClick("log")}
-            isActive={paragraphContent === "log"}
-          >
-            Log
-          </Button>
-
-          <Button
-            onClick={() => handleClick("info")}
-            isActive={paragraphContent === "info"}
-          >
-            Info
-          </Button>
-
-          <Button
-            onClick={() => handleClick("reload a page")}
-            isActive={paragraphContent === "reload a page"}
-          >
-            Reload
-          </Button>
-
-          <p>{paragraphContent}</p>
+          <h1>Home</h1>
 
           <p>
+            <br />
+            <br />
+            <br />
             Повседневная практика показывает, что выбранный нами инновационный
             путь в значительной степени обуславливает создание соответствующих
             условий активизации. Не следует, однако, забывать о том, что

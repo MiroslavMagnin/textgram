@@ -6,6 +6,7 @@ import { useState } from "react";
 import Header from "../Header/Header";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import { getUserDataByEmail } from "../../servicesFunctions.js";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -46,8 +47,6 @@ export default function SignUpPage() {
     event.preventDefault();
 
     try {
-      console.log("IT'S TRY TO SIGN UP");
-
       // Check for empty fields
       if (!name || !email || !birthDate || !password) {
         setError("Please fill in all fields.");
@@ -66,10 +65,11 @@ export default function SignUpPage() {
 
       const user = jwtDecode(token);
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
 
       console.log(response.data);
       console.log(user);
+
+      getUserDataByEmail(user.sub);
 
       navigate("/feed");
     } catch (error) {
@@ -94,6 +94,15 @@ export default function SignUpPage() {
             <hr />
 
             <form>
+              <div
+                className="signErrors"
+                style={{
+                  display: error === "" ? "none" : "block",
+                }}
+              >
+                <label>Error: {error}</label>
+              </div>
+
               <label htmlFor="name">Name: </label>
               <label
                 className={`wrongField ${hasNameError ? "show" : "hide"}`}

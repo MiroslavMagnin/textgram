@@ -5,6 +5,7 @@ import HomePage from "./HomePage";
 import { NotFoundPage } from "./components/NotFound/NotFoundPage";
 import AboutPage from "./components/About/AboutPage";
 import ProfilePage from "./components/Profile/ProfilePage";
+import SettingsPage from "./components/Settings/SettingsPage";
 import FeedPage from "./components/Feed/FeedPage";
 
 export default function RoutesPage() {
@@ -20,6 +21,8 @@ export default function RoutesPage() {
         <Route path="/about" element={<AboutPage />} />
 
         <Route path="/profile" element={<ProfilePage />} />
+
+        <Route path="/settings" element={<SettingsPage />} />
 
         <Route path="/signup" element={<SignUpPage />} />
 

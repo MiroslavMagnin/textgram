@@ -10,6 +10,11 @@
   },
 
   {
+    "link": "/profile",
+    "label": "Profile"
+  },
+
+  {
     "link": "/about",
     "label": "About"
   }
