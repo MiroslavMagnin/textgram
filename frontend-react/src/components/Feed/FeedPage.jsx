@@ -1,11 +1,13 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar";
 import Button from "../Button/Button";
 import "./FeedPage.css";
+import Loading from "../Loading/Loading.jsx";
 import {
   getAllFollowingPosts,
   getUserDataById,
@@ -46,15 +48,19 @@ export default function FeedPage() {
           <div className="feed">
             <div className="feed__posts">
               {followingPosts.length > 0 ? (
+                // Posts
                 followingPosts.map((post, index) => (
                   <div className="feed__post" key={index}>
                     <div className="post-header">
                       <div className="post-header__author">
-                        <h3>
+                        <a
+                          classname="post-header__author-link"
+                          href={"/user/" + post.authorId}
+                        >
                           {post.authorName !== null
                             ? post.authorName
                             : post.authorId}
-                        </h3>
+                        </a>
                       </div>
 
                       <div className="post-header__actions">
@@ -70,7 +76,8 @@ export default function FeedPage() {
                   </div>
                 ))
               ) : (
-                <div>Загрузка...</div> // Сообщение о загрузке, если посты ещё не загружены
+                // Loading message
+                <Loading />
               )}
             </div>
           </div>

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./ProfilePage.css";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar";
 import Button from "../Button/Button";
 
@@ -11,10 +12,12 @@ export default function ProfilePage() {
   const user = JSON.parse(localStorage.getItem("user"));
 
   const [isAuth, setAuth] = useState();
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     let token = localStorage.getItem("token");
     setAuth(token !== null);
-  });
+    setLoaded(true);
+  }, [loaded]);
 
   const navigate = useNavigate();
 
@@ -29,6 +32,19 @@ export default function ProfilePage() {
           <h1>Profile</h1>
 
           <div className="profile-actions">
+            <div className="action-line">
+              <div className="action-line__label">Go to the your page: </div>
+              <div className="action-line__action">
+                <Button
+                  onClick={() => {
+                    navigate("/user/" + user.userId);
+                  }}
+                >
+                  Your page
+                </Button>
+              </div>
+            </div>
+
             <div className="action-line">
               <div className="action-line__label">Go to the settings: </div>
               <div className="action-line__action">
@@ -72,6 +88,8 @@ export default function ProfilePage() {
           </div>
         </main>
       </div>
+
+      <Footer />
     </>
   );
 }

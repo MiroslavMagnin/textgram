@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer.jsx";
 import Header from "../Header/Header.jsx";
 import SideBar from "../SideBar/SideBar.jsx";
 
@@ -57,6 +58,8 @@ export default function AboutPage() {
           </ul>
         </main>
       </div>
+
+      <Footer />
     </>
   );
 }

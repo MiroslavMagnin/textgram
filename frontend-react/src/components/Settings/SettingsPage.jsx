@@ -6,6 +6,7 @@ import "./SettingsPage.css";
 import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
 import Button from "../Button/Button";
+import Footer from "../Footer/Footer";
 
 export default function SettingsPage() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -69,6 +70,8 @@ export default function SettingsPage() {
           </div>
         </main>
       </div>
+
+      <Footer />
     </>
   );
 }

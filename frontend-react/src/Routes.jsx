@@ -7,6 +7,7 @@ import AboutPage from "./components/About/AboutPage";
 import ProfilePage from "./components/Profile/ProfilePage";
 import SettingsPage from "./components/Settings/SettingsPage";
 import FeedPage from "./components/Feed/FeedPage";
+import UserPage from "./components/User/UserPage.jsx";
 
 export default function RoutesPage() {
   return (
@@ -21,6 +22,8 @@ export default function RoutesPage() {
         <Route path="/about" element={<AboutPage />} />
 
         <Route path="/profile" element={<ProfilePage />} />
+
+        <Route path="/user/:userId" element={<UserPage />} />
 
         <Route path="/settings" element={<SettingsPage />} />
 

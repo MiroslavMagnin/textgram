@@ -1,3 +1,4 @@
+/* Feed */
 .feed__posts {
   margin: 2rem 0;
 }
@@ -24,6 +25,7 @@
   border-radius: 20px;
 }
 
+/* Post */
 .post-header {
   display: flex;
   flex-flow: row wrap;
@@ -35,6 +37,20 @@
 
 .post-header__author {
   font-size: 1.4em;
+}
+
+.post-header__author-link {
+  padding: 0.1rem;
+
+  color: white;
+
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.post-header__author-link:hover {
+  background-color: #636363;
+  border-radius: 10px;
 }
 
 .post-header__actions {

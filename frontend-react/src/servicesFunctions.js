@@ -1,4 +1,63 @@
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+
+// Check is token expored or not (only check)
+export function isAuthorized() {
+  let token = localStorage.getItem("token");
+
+  try {
+    const decodedToken = jwtDecode(token);
+    const currentTime = Date.now() / 1000;
+    return decodedToken.exp > currentTime;
+  } catch (error) {
+    console.error("Error decoding token: ", error);
+    return false;
+  }
+}
+
+// Check is token expored or not (check and call refreshToken() if a user isn't authorized)
+export async function checkAuthorized() {
+  const token = localStorage.getItem("token");
+
+  try {
+    const decodedToken = jwtDecode(token);
+    const currentTime = Date.now() / 1000;
+
+    if (decodedToken.exp < currentTime) {
+      refreshToken();
+    }
+  } catch (error) {
+    console.error("Error decoding token: ", error);
+    refreshToken();
+    return false;
+  }
+}
+
+// Get new token
+export async function refreshToken() {
+  // TODO: if token is null, the user need to sign in again
+
+  try {
+    const response = await axios.post("/auth/refresh-token", {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-type": "Application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    // Handle successful
+    const tokenData = response.data;
+    console.log("TokenData: " + tokenData.accessToken);
+    localStorage.setItem("token", tokenData.accessToken);
+  } catch (error) {
+    // Handle error
+    console.error(
+      "Refrech token failed: ",
+      error.response ? error.response.data : error.message
+    );
+  }
+}
 
 export async function getUserDataByEmail(email) {
   try {
@@ -28,7 +87,6 @@ export async function getUserDataByEmail(email) {
 export async function getUserDataById(id) {
   const user = localStorage.getItem("user_" + id);
   if (user !== null) {
-    console.log(user);
     return user;
   }
 
@@ -44,7 +102,7 @@ export async function getUserDataById(id) {
     // Handle successful
     const user = response.data;
     localStorage.setItem("user_" + response.data.userId, JSON.stringify(user));
-    console.log(user);
+    console.log("User from get-request" + user);
 
     return user;
   } catch (error) {
@@ -80,6 +138,8 @@ export async function getAllFollowingPosts(id) {
       "Get all following posts failed:",
       error.response ? error.response.data : error.message
     );
+
+    checkAuthorized();
 
     return [];
     // setError(error.response ? error.response.data : error.message);

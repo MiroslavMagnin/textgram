@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header.jsx";
 import Button from "./components/Button/Button.jsx";
 import SideBar from "./components/SideBar/SideBar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 export default function HomePage() {
   return (
@@ -80,6 +81,7 @@ export default function HomePage() {
           </p>
         </main>
       </div>
+      <Footer />
     </>
   );
 }

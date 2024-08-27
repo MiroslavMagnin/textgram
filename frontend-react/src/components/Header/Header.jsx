@@ -10,8 +10,8 @@ export default function Header() {
   const [isAuth, setAuth] = useState();
   useEffect(() => {
     let token = localStorage.getItem("token");
-    setAuth(token !== null);
-  });
+    setAuth(token !== null && token !== "undefined" && token !== "");
+  }, [isAuth]);
 
   return (
     <header>

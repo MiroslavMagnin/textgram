@@ -60,6 +60,7 @@ export default function SignUpPage() {
         email,
         password,
       });
+
       // Handle successful signup
       const token = response.data.accessToken;
 
