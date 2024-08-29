@@ -131,7 +131,7 @@ export default function SignInPage() {
                 isActive={!(hasEmailError || hasPasswordError)}
                 onClick={handleSignIn}
               >
-                Sign Up!
+                Sign In!
               </Button>
             </form>
           </div>

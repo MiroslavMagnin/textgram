@@ -142,6 +142,33 @@ export async function getAllFollowingPosts(id) {
     checkAuthorized();
 
     return [];
-    // setError(error.response ? error.response.data : error.message);
+  }
+}
+
+export async function getAllUserPosts(id) {
+  try {
+    const response = await axios.get("/post/get-user-posts-by-id/" + id, {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-type": "Application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    // Handle successful
+    const posts = response.data;
+    localStorage.setItem("posts-user_" + id, JSON.stringify(posts));
+
+    return JSON.stringify(posts);
+  } catch (error) {
+    // Handle error
+    console.error(
+      "Get user posts failed: ",
+      error.response ? error.response.data : error.message
+    );
+
+    checkAuthorized();
+
+    return [];
   }
 }

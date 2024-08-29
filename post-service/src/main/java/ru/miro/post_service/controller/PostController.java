@@ -30,9 +30,15 @@ public class PostController {
     }
 
     @GetMapping("/get-post-by-id/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     public PostDTO findOne(@PathVariable("id") Long postId) {
         return postService.findOne(postId);
+    }
+
+    @GetMapping("/get-user-posts-by-id/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<PostDTO> findUserPosts(@PathVariable("id") Long userId) {
+        return postService.findUserPosts(userId);
     }
 
     @GetMapping("/get-following-posts/{id}")

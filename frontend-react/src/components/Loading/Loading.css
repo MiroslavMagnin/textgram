@@ -1,8 +1,17 @@
 /* Loading animation */
-.feed__loading {
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 2rem;
+  padding: 1rem;
+
+  background-color: #3d3d3d;
+  border-radius: 20px;
 }
 
 .loading-text {

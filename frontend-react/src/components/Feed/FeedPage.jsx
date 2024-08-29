@@ -8,6 +8,8 @@ import SideBar from "../SideBar/SideBar";
 import Button from "../Button/Button";
 import "./FeedPage.css";
 import Loading from "../Loading/Loading.jsx";
+import Post from "./Post/Post.jsx";
+import NoPosts from "./Post/NoPosts.jsx";
 import {
   getAllFollowingPosts,
   getUserDataById,
@@ -15,9 +17,14 @@ import {
 
 export default function FeedPage() {
   const user = JSON.parse(localStorage.getItem("user"));
+  // const [user, setUser] = useState(null);
 
   const [isAuth, setAuth] = useState();
   const [followingPosts, setFollowingPosts] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [havePosts, setHavePosts] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Check authorized
@@ -26,14 +33,27 @@ export default function FeedPage() {
 
     // Get following posts
     const fetchFollowingPosts = async () => {
-      const posts = await getAllFollowingPosts(user.userId);
-      setFollowingPosts(posts);
+      let posts = null;
+      try {
+        posts = await getAllFollowingPosts(user.userId);
+        setFollowingPosts(posts);
+        setHavePosts(posts.length > 0);
+      } catch (error) {
+        console.error("Fetch following posts failed: ", error);
+        setHavePosts(false);
+      } finally {
+        if (posts != null) {
+          setIsLoaded(true);
+        }
+      }
     };
 
     fetchFollowingPosts();
-  }, [user.userId]);
+  }, [user.userId]); // user.userId
 
-  const followingPostsOutput = followingPosts.map((item) => <div>{item}</div>);
+  const followingPostsOutput = followingPosts.map((post) => (
+    <Post post={post} key={post.postId} />
+  ));
 
   return (
     <>
@@ -47,37 +67,18 @@ export default function FeedPage() {
 
           <div className="feed">
             <div className="feed__posts">
-              {followingPosts.length > 0 ? (
-                // Posts
-                followingPosts.map((post, index) => (
-                  <div className="feed__post" key={index}>
-                    <div className="post-header">
-                      <div className="post-header__author">
-                        <a
-                          classname="post-header__author-link"
-                          href={"/user/" + post.authorId}
-                        >
-                          {post.authorName !== null
-                            ? post.authorName
-                            : post.authorId}
-                        </a>
-                      </div>
-
-                      <div className="post-header__actions">
-                        <Button>Unfollow</Button>
-                      </div>
-                    </div>
-
-                    <hr />
-
-                    <div className="post-content">
-                      <div className="post-content__text">{post.text}</div>
-                    </div>
+              {isAuth ? (
+                !isLoaded ? (
+                  <Loading />
+                ) : havePosts ? (
+                  followingPostsOutput
+                ) : (
+                  <div className="feed__no-posts">
+                    <NoPosts />
                   </div>
-                ))
+                )
               ) : (
-                // Loading message
-                <Loading />
+                <div>YOU AREN'T AUTHORIZED</div>
               )}
             </div>
           </div>

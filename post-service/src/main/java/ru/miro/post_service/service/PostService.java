@@ -42,6 +42,12 @@ public class PostService {
         return postRepository.findById(postId).map(postMapper::toDTO).orElseThrow(() -> new PostNotFoundException(postId));
     }
 
+    @Cacheable(cacheNames = "posts", key="#userId")
+    public List<PostDTO> findUserPosts(Long userId) {
+        return postRepository.findByAuthorId(userId).stream().map(postMapper::toDTO).collect(Collectors.toList());
+
+    }
+
     public List<PostDTO> findAllFollowingPosts(Long userId) {
         // Get user by feign client
         User user = userClient.getUserById(userId);

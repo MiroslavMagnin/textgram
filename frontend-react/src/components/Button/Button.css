@@ -12,15 +12,15 @@
   /* transition: border-color 0.25s; */
 }
 
-.button:hover { 
-  background-color: #a1a1a1;
+.button:hover {
+  background-color: #8f8f8f;
 }
 
 .button.active {
   background-color: #4db968;
 }
 
-.button.active:hover { 
+.button.active:hover {
   background-color: #4fcc6e;
 }
 
@@ -30,6 +30,6 @@
   background-color: #636363;
 }
 
-.button:disabled:hover { 
+.button:disabled:hover {
   border-color: #8b8b8b;
-} 
+}

@@ -13,6 +13,8 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 
     Optional<Post> findById(Long postId);
 
+    List<Post> findByAuthorId(Long authorId);
+
     List<Post> findByAuthorIdIn(List<Long> authorsId);
 
 }
