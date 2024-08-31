@@ -7,6 +7,7 @@ import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
 import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
+import NotAuthorized from "../NotAuthorized/NotAuthorized";
 
 export default function SettingsPage() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -34,40 +35,46 @@ export default function SettingsPage() {
         <main>
           <h1>Settings</h1>
 
-          <div className="settings-actions">
-            <div className="action-line">
-              <div className="action-line__label">
-                Log out of your account:{" "}
+          {user !== null ? (
+            <>
+              <div className="settings-actions">
+                <div className="action-line">
+                  <div className="action-line__label">
+                    Log out of your account:{" "}
+                  </div>
+                  <div className="action-line__action">
+                    <Button onClick={handleLogout}>logout</Button>
+                  </div>
+                </div>
               </div>
-              <div className="action-line__action">
-                <Button onClick={handleLogout}>logout</Button>
+
+              <div className="profile-data">
+                <div className="profile-data__line">
+                  <div className="profile-data__label">Name:</div>
+                  <div className="profile-data__text">{user.name}</div>
+                  <Button>Change</Button>
+                </div>
+
+                <hr />
+
+                <div className="profile-data__line">
+                  <div className="profile-data__label">BirthDate:</div>
+                  <div className="profile-data__text">{user.birthDate}</div>
+                  <Button>Change</Button>
+                </div>
+
+                <hr />
+
+                <div className="profile-data__line">
+                  <div className="profile-data__label">Email:</div>
+                  <div className="profile-data__text">{user.email}</div>
+                  <Button>Change</Button>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="profile-data">
-            <div className="profile-data__line">
-              <div className="profile-data__label">Name:</div>
-              <div className="profile-data__text">{user.name}</div>
-              <Button>Change</Button>
-            </div>
-
-            <hr />
-
-            <div className="profile-data__line">
-              <div className="profile-data__label">BirthDate:</div>
-              <div className="profile-data__text">{user.birthDate}</div>
-              <Button>Change</Button>
-            </div>
-
-            <hr />
-
-            <div className="profile-data__line">
-              <div className="profile-data__label">Email:</div>
-              <div className="profile-data__text">{user.email}</div>
-              <Button>Change</Button>
-            </div>
-          </div>
+            </>
+          ) : (
+            <NotAuthorized />
+          )}
         </main>
       </div>
 

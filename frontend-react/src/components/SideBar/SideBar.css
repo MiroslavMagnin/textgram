@@ -3,7 +3,7 @@
   position: -webkit-sticky;
   top: 4rem;
   align-self: flex-start;
-  width: 10%;
+  width: 10rem;
 }
 
 .left-menu-item {
@@ -13,6 +13,11 @@
 
 .left-menu-item-a {
   display: flex;
+  align-items: center;
+
+  white-space: pre-line;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .left-menu-item-a:hover {
@@ -21,6 +26,7 @@
 
 .left-menu-item-icon {
   margin: 0 1rem 0 0;
+  padding: 0.1rem;
 
   display: flex;
   justify-content: center;
@@ -29,6 +35,8 @@
 .left-menu-item-label {
   margin: 0;
   padding: 0;
+
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 800px) {

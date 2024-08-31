@@ -5,6 +5,7 @@ export default function Footer() {
     <>
       <footer>
         <p>Textgram - is the social network with only text information</p>
+        <br />
         <p>© {new Date().getFullYear()} Miroslav Magnin</p>
       </footer>
     </>

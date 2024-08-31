@@ -69,6 +69,13 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  text-align: center;
+  margin: 1.5rem 0 0;
+}
+
 p {
   margin: 0;
   font-size: 1.5em;
@@ -122,6 +129,12 @@ hr {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .page-layout {
+    gap: 2.5rem;
   }
 }
 

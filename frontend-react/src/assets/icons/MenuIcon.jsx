@@ -1,9 +1,9 @@
-export default function MenuIcon({ fillColor }) {
+export default function MenuIcon({ fillColor, size }) {
   return (
     <svg
       fill={fillColor}
-      height="32"
-      width="32"
+      height={size}
+      width={size}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"

@@ -41,7 +41,7 @@ export default function AboutPage() {
               </a>
             </li>
             <li>
-              GitHub -
+              GitHub -{" "}
               <a href="https://github.com/MiroslavMagnin" target="_blank">
                 MiroslavMagnin
               </a>

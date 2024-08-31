@@ -4,6 +4,7 @@ import "./Sign.css";
 import Button from "../Button/Button";
 import { useState } from "react";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { getUserDataByEmail } from "../../servicesFunctions.js";
@@ -190,6 +191,8 @@ export default function SignUpPage() {
           </div>
         </main>
       </div>
+
+      <Footer />
     </>
   );
 }

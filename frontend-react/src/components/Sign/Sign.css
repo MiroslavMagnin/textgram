@@ -4,6 +4,10 @@
 
   text-align: left;
   margin: 0 auto;
+  padding: 1rem;
+
+  background-color: #3d3d3d;
+  border-radius: 20px;
 }
 
 .sign h2 {
@@ -40,14 +44,14 @@
 }
 
 .sign hr {
-  width: 95%;
+  width: 98%;
   height: 0.2rem;
   margin: 1.5rem auto;
 
-  background-color: #3d3d3d;
+  background-color: #7a7a7a;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .sign button {

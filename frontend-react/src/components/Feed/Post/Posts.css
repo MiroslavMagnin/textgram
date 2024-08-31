@@ -71,9 +71,20 @@
   padding-top: 100%;
 }
 
+.post-header__date-of-writing {
+  padding: 0.2rem;
+
+  font-size: 0.9em;
+}
+
 .post-header__actions {
   float: right;
   margin: 0 0.3rem;
+}
+
+.actions__unfollow-btn {
+  padding: 0.2em 0.5em;
+  font-size: 0.5em;
 }
 
 .post-content {
@@ -98,4 +109,12 @@
   font-size: 1.2em;
   font-weight: bold;
   color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .post-header__date-of-writing {
+    padding: 0.2rem;
+
+    font-size: 0.6em;
+  }
 }

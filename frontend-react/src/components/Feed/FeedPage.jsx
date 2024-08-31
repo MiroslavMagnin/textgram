@@ -10,6 +10,7 @@ import "./FeedPage.css";
 import Loading from "../Loading/Loading.jsx";
 import Post from "./Post/Post.jsx";
 import NoPosts from "./Post/NoPosts.jsx";
+import NotAuthorized from "../NotAuthorized/NotAuthorized.jsx";
 import {
   getAllFollowingPosts,
   getUserDataById,
@@ -29,7 +30,7 @@ export default function FeedPage() {
   useEffect(() => {
     // Check authorized
     let token = localStorage.getItem("token");
-    setAuth(token !== null);
+    setAuth(token !== null && user !== null);
 
     // Get following posts
     const fetchFollowingPosts = async () => {
@@ -49,7 +50,7 @@ export default function FeedPage() {
     };
 
     fetchFollowingPosts();
-  }, [user.userId]); // user.userId
+  }, []); // user.userId - 30.08.2024 - I took it away
 
   const followingPostsOutput = followingPosts.map((post) => (
     <Post post={post} key={post.postId} />
@@ -65,23 +66,29 @@ export default function FeedPage() {
         <main>
           <h1>Feed</h1>
 
-          <div className="feed">
-            <div className="feed__posts">
-              {isAuth ? (
-                !isLoaded ? (
-                  <Loading />
-                ) : havePosts ? (
-                  followingPostsOutput
-                ) : (
-                  <div className="feed__no-posts">
-                    <NoPosts />
-                  </div>
-                )
-              ) : (
-                <div>YOU AREN'T AUTHORIZED</div>
-              )}
-            </div>
-          </div>
+          {isAuth ? (
+            <>
+              <div className="feed">
+                <div className="feed__posts">
+                  {isAuth ? (
+                    !isLoaded ? (
+                      <Loading />
+                    ) : havePosts ? (
+                      followingPostsOutput
+                    ) : (
+                      <div className="feed__no-posts">
+                        <NoPosts />
+                      </div>
+                    )
+                  ) : (
+                    <div>YOU AREN'T AUTHORIZED</div>
+                  )}
+                </div>
+              </div>
+            </>
+          ) : (
+            <NotAuthorized />
+          )}
         </main>
       </div>
 

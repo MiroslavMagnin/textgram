@@ -1,0 +1,25 @@
+.not-authorized {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 2rem;
+  padding: 1rem;
+
+  background-color: #3d3d3d;
+  border-radius: 20px;
+}
+
+.not-authorized__icon {
+  display: flex;
+  align-items: center;
+}
+
+.not-authorized__text {
+  margin-left: 1rem;
+
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}

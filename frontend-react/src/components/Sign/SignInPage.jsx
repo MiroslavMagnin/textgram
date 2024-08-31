@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import { getUserDataByEmail } from "../../servicesFunctions.js";
 
 export default function SignInPage() {
@@ -137,6 +138,8 @@ export default function SignInPage() {
           </div>
         </main>
       </div>
+
+      <Footer />
     </>
   );
 }

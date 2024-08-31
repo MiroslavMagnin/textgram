@@ -98,6 +98,50 @@ export default function UserPage() {
                   </div>
                 </div>
                 <div className="user-container">
+                  <div className="user-container__top-bar">
+                    <div className="top-bar__followers">
+                      <div className="follow-label">Followers: </div>
+                      {currentUser.followers.length != 0 ? (
+                        currentUser.followers.map((follower) => (
+                          <div
+                            className="followers__follower-item"
+                            key={follower.followId}
+                          >
+                            <Link
+                              className="follower-item__user-link"
+                              to={"/user/" + follower.from.userId}
+                            >
+                              {follower.from.name}
+                            </Link>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="no-follow">No followers</div>
+                      )}
+                    </div>
+
+                    <div className="top-bar__following">
+                      <div className="follow-label">Following: </div>
+                      {currentUser.following.length != 0 ? (
+                        currentUser.following.map((following) => (
+                          <div
+                            className="following__following-item"
+                            key={following.followId}
+                          >
+                            <Link
+                              className="following-item__user-link"
+                              to={"/user/" + following.to.userId}
+                            >
+                              {following.to.name}
+                            </Link>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="no-follow">No following</div>
+                      )}
+                    </div>
+                  </div>
+
                   <div className="user-container__posts">
                     {isAuth ? (
                       !userPostsLoaded ? (
@@ -113,6 +157,7 @@ export default function UserPage() {
                       <div>YOU AREN'T AUTHORIZED</div>
                     )}
                   </div>
+
                   <div className="user-container__right-bar">
                     <div className="right-bar__followers">
                       <div className="follow-label">Followers: </div>

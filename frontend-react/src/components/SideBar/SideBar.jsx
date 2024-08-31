@@ -1,6 +1,11 @@
+import React from "react";
 import "./SideBar.css";
 import links from "../../data.json";
-import homeIcon from "../../assets/icons/home.svg";
+import HomeIcon from "../../assets/icons/HomeIcon";
+import FeedIcon from "../../assets/icons/FeedIcon";
+import ProfileIcon from "../../assets/icons/ProfileIcon";
+import SettingsIcon from "../../assets/icons/SettingsIcon";
+import QuestionIcon from "../../assets/icons/QuestionIcon";
 import { Link } from "react-router-dom";
 
 export default function SideBar() {
@@ -12,65 +17,35 @@ export default function SideBar() {
             <div className="left-menu-item">
               <Link className="left-menu-item-a" to={links[0].link}>
                 <div className="left-menu-item-icon">
-                  <embed
-                    src={homeIcon}
-                    width="24"
-                    height="24"
-                    type="image/svg+xml"
-                    alt="Home Icon"
-                  />
+                  <HomeIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[0].label}</span>
               </Link>
 
               <Link className="left-menu-item-a" to={links[1].link}>
                 <div className="left-menu-item-icon">
-                  <embed
-                    src={homeIcon}
-                    width="24"
-                    height="24"
-                    type="image/svg+xml"
-                    alt="Home Icon"
-                  />
+                  <FeedIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[1].label}</span>
               </Link>
 
               <Link className="left-menu-item-a" to={links[2].link}>
                 <div className="left-menu-item-icon">
-                  <embed
-                    src={homeIcon}
-                    width="24"
-                    height="24"
-                    type="image/svg+xml"
-                    alt="Home Icon"
-                  />
+                  <ProfileIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[2].label}</span>
               </Link>
 
               <Link className="left-menu-item-a" to={links[3].link}>
                 <div className="left-menu-item-icon">
-                  <embed
-                    src={homeIcon}
-                    width="24"
-                    height="24"
-                    type="image/svg+xml"
-                    alt="Home Icon"
-                  />
+                  <SettingsIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[3].label}</span>
               </Link>
 
               <Link className="left-menu-item-a" to={links[4].link}>
                 <div className="left-menu-item-icon">
-                  <embed
-                    src={homeIcon}
-                    width="24"
-                    height="24"
-                    type="image/svg+xml"
-                    alt="Home Icon"
-                  />
+                  <QuestionIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[4].label}</span>
               </Link>
