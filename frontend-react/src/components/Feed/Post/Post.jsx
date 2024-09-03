@@ -1,8 +1,14 @@
 import "./Posts.css";
 import Button from "../../Button/Button";
 import { Link } from "react-router-dom";
+import { unfollow } from "../../../servicesFunctions.js";
 
-export default function Post({ post }) {
+export default function Post({ post, userId }) {
+  function handleUnfollow() {
+    unfollow(Number(userId), Number(post.authorId));
+    console.log("Unfollow from=" + userId + " to=" + post.authorId);
+  }
+
   return (
     <div className="post-container">
       <div className="post-header">
@@ -22,7 +28,7 @@ export default function Post({ post }) {
         </div>
 
         <div className="post-header__actions">
-          <Button>Unfollow</Button>
+          <Button onClick={handleUnfollow}>Unfollow</Button>
         </div>
       </div>
 

@@ -53,7 +53,7 @@ export default function FeedPage() {
   }, []); // user.userId - 30.08.2024 - I took it away
 
   const followingPostsOutput = followingPosts.map((post) => (
-    <Post post={post} key={post.postId} />
+    <Post post={post} userId={user} key={post.postId} />
   ));
 
   return (

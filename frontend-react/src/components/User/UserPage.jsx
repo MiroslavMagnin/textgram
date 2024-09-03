@@ -9,7 +9,12 @@ import SideBar from "../SideBar/SideBar";
 import Button from "../Button/Button";
 import Post from "../Feed/Post/Post.jsx";
 import Loading from "../Loading/Loading.jsx";
-import { getUserDataById, getAllUserPosts } from "../../servicesFunctions.js";
+import NotAuthorized from "../NotAuthorized/NotAuthorized";
+import {
+  getUserDataById,
+  getAllUserPosts,
+  checkAuthorized,
+} from "../../servicesFunctions.js";
 
 export default function UserPage() {
   const params = useParams();
@@ -25,7 +30,8 @@ export default function UserPage() {
   useEffect(() => {
     // Check authorized
     let token = localStorage.getItem("token");
-    setAuth(token !== null);
+    let tokenLifeCycle = checkAuthorized();
+    setAuth(token !== null && authUser !== null && tokenLifeCycle);
 
     // Get current user info
     const fetchCurrentUserInfo = async () => {
@@ -77,138 +83,153 @@ export default function UserPage() {
         <SideBar />
 
         <main>
-          <div className="user">
-            {loaded ? (
-              <>
-                <div className="user-header">
-                  <div className="user-header__header">
-                    <div className="user-header__name">
-                      <h3>{currentUser.name}</h3>
-                    </div>
-
-                    <div className="post-header__actions">
-                      <Button>Unfollow</Button>
-                    </div>
-                  </div>
-
-                  <hr />
-
-                  <div className="user-header__info">
-                    <h3>{"Birth date: " + currentUser.birthDate}</h3>
-                  </div>
-                </div>
-                <div className="user-container">
-                  <div className="user-container__top-bar">
-                    <div className="top-bar__followers">
-                      <div className="follow-label">Followers: </div>
-                      {currentUser.followers.length != 0 ? (
-                        currentUser.followers.map((follower) => (
-                          <div
-                            className="followers__follower-item"
-                            key={follower.followId}
-                          >
-                            <Link
-                              className="follower-item__user-link"
-                              to={"/user/" + follower.from.userId}
-                            >
-                              {follower.from.name}
-                            </Link>
-                          </div>
-                        ))
-                      ) : (
-                        <div className="no-follow">No followers</div>
-                      )}
-                    </div>
-
-                    <div className="top-bar__following">
-                      <div className="follow-label">Following: </div>
-                      {currentUser.following.length != 0 ? (
-                        currentUser.following.map((following) => (
-                          <div
-                            className="following__following-item"
-                            key={following.followId}
-                          >
-                            <Link
-                              className="following-item__user-link"
-                              to={"/user/" + following.to.userId}
-                            >
-                              {following.to.name}
-                            </Link>
-                          </div>
-                        ))
-                      ) : (
-                        <div className="no-follow">No following</div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="user-container__posts">
-                    {isAuth ? (
-                      !userPostsLoaded ? (
-                        <Loading />
-                      ) : havePosts ? (
-                        userPostsOutput
-                      ) : (
-                        <div className="user-container__no-posts">
-                          <NoPosts />
+          {isAuth ? (
+            <>
+              <div className="user">
+                {loaded ? (
+                  <>
+                    <div className="user-header">
+                      <div className="user-header__header">
+                        <div className="user-header__name">
+                          <h3>{currentUser.name}</h3>
                         </div>
-                      )
-                    ) : (
-                      <div>YOU AREN'T AUTHORIZED</div>
-                    )}
-                  </div>
 
-                  <div className="user-container__right-bar">
-                    <div className="right-bar__followers">
-                      <div className="follow-label">Followers: </div>
-                      {currentUser.followers.length != 0 ? (
-                        currentUser.followers.map((follower) => (
-                          <div
-                            className="followers__follower-item"
-                            key={follower.followId}
+                        <div className="post-header__actions">
+                          <Button
+                            style={{
+                              display:
+                                Number(params.userId) === authUser.userId
+                                  ? "none"
+                                  : "block",
+                            }}
                           >
-                            <Link
-                              className="follower-item__user-link"
-                              to={"/user/" + follower.from.userId}
-                            >
-                              {follower.from.name}
-                            </Link>
-                          </div>
-                        ))
-                      ) : (
-                        <div className="no-follow">No followers</div>
-                      )}
-                    </div>
+                            Unfollow
+                          </Button>
+                        </div>
+                      </div>
 
-                    <div className="right-bar__following">
-                      <div className="follow-label">Following: </div>
-                      {currentUser.following.length != 0 ? (
-                        currentUser.following.map((following) => (
-                          <div
-                            className="following__following-item"
-                            key={following.followId}
-                          >
-                            <Link
-                              className="following-item__user-link"
-                              to={"/user/" + following.to.userId}
-                            >
-                              {following.to.name}
-                            </Link>
-                          </div>
-                        ))
-                      ) : (
-                        <div className="no-follow">No following</div>
-                      )}
+                      <hr />
+
+                      <div className="user-header__info">
+                        <h3>{"Birth date: " + currentUser.birthDate}</h3>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <Loading />
-              </>
-            )}
-          </div>
+                    <div className="user-container">
+                      <div className="user-container__top-bar">
+                        <div className="top-bar__followers">
+                          <div className="follow-label">Followers: </div>
+                          {currentUser.followers.length != 0 ? (
+                            currentUser.followers.map((follower) => (
+                              <div
+                                className="followers__follower-item"
+                                key={follower.followId}
+                              >
+                                <Link
+                                  className="follower-item__user-link"
+                                  to={"/user/" + follower.from.userId}
+                                >
+                                  {follower.from.name}
+                                </Link>
+                              </div>
+                            ))
+                          ) : (
+                            <div className="no-follow">No followers</div>
+                          )}
+                        </div>
+
+                        <div className="top-bar__following">
+                          <div className="follow-label">Following: </div>
+                          {currentUser.following.length != 0 ? (
+                            currentUser.following.map((following) => (
+                              <div
+                                className="following__following-item"
+                                key={following.followId}
+                              >
+                                <Link
+                                  className="following-item__user-link"
+                                  to={"/user/" + following.to.userId}
+                                >
+                                  {following.to.name}
+                                </Link>
+                              </div>
+                            ))
+                          ) : (
+                            <div className="no-follow">No following</div>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="user-container__posts">
+                        {isAuth ? (
+                          !userPostsLoaded ? (
+                            <Loading />
+                          ) : havePosts ? (
+                            userPostsOutput
+                          ) : (
+                            <div className="user-container__no-posts">
+                              <NoPosts />
+                            </div>
+                          )
+                        ) : (
+                          <div>YOU AREN'T AUTHORIZED</div>
+                        )}
+                      </div>
+
+                      <div className="user-container__right-bar">
+                        <div className="right-bar__followers">
+                          <div className="follow-label">Followers: </div>
+                          {currentUser.followers.length != 0 ? (
+                            currentUser.followers.map((follower) => (
+                              <div
+                                className="followers__follower-item"
+                                key={follower.followId}
+                              >
+                                <Link
+                                  className="follower-item__user-link"
+                                  to={"/user/" + follower.from.userId}
+                                >
+                                  {follower.from.name}
+                                </Link>
+                              </div>
+                            ))
+                          ) : (
+                            <div className="no-follow">No followers</div>
+                          )}
+                        </div>
+
+                        <div className="right-bar__following">
+                          <div className="follow-label">Following: </div>
+                          {currentUser.following.length != 0 ? (
+                            currentUser.following.map((following) => (
+                              <div
+                                className="following__following-item"
+                                key={following.followId}
+                              >
+                                <Link
+                                  className="following-item__user-link"
+                                  to={"/user/" + following.to.userId}
+                                >
+                                  {following.to.name}
+                                </Link>
+                              </div>
+                            ))
+                          ) : (
+                            <div className="no-follow">No following</div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <Loading />
+                  </>
+                )}
+              </div>
+            </>
+          ) : (
+            <NotAuthorized />
+          )}
         </main>
       </div>
 

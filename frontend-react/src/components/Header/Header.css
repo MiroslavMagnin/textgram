@@ -84,6 +84,11 @@ header {
   line-height: 1;
 }
 
+#nav-item__signup,
+#nav-item__signin {
+  display: none;
+}
+
 .nav-item__link {
   display: flex;
   flex-wrap: nowrap;

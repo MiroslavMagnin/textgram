@@ -2,6 +2,7 @@ package ru.miro.user_service.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import ru.miro.user_service.exception.FollowerNotCreatedException;
 import ru.miro.user_service.exception.FollowerNotFoundException;
@@ -20,6 +21,7 @@ public class FollowersService {
     private final FollowersRepository followersRepository;
     private final UsersService usersService;
 
+    @CacheEvict(cacheNames = "users", allEntries = true)
     public void save(long from, long to) {
         User fromUser = usersService.findOne(from);
         User toUser = usersService.findOne(to);
@@ -37,6 +39,7 @@ public class FollowersService {
         followersRepository.save(follower);
     }
 
+    @CacheEvict(cacheNames = "users", allEntries = true)
     public void unfollow(long from, long to) {
         User fromUser = usersService.findOne(from);
         User toUser = usersService.findOne(to);
@@ -49,6 +52,7 @@ public class FollowersService {
         followersRepository.delete(getFollower.get());
     }
 
+    @CacheEvict(cacheNames = "users", allEntries = true)
     public void unfollow(long followerId) {
         if (followersRepository.findById(followerId).isEmpty()) {
             throw new FollowerNotFoundException(followerId);

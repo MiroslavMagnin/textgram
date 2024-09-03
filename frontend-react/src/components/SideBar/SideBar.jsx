@@ -38,16 +38,23 @@ export default function SideBar() {
 
               <Link className="left-menu-item-a" to={links[3].link}>
                 <div className="left-menu-item-icon">
-                  <SettingsIcon fillColor={"white"} size="20" />
+                  <ProfileIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[3].label}</span>
               </Link>
 
               <Link className="left-menu-item-a" to={links[4].link}>
                 <div className="left-menu-item-icon">
-                  <QuestionIcon fillColor={"white"} size="20" />
+                  <SettingsIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[4].label}</span>
+              </Link>
+
+              <Link className="left-menu-item-a" to={links[5].link}>
+                <div className="left-menu-item-icon">
+                  <QuestionIcon fillColor={"white"} size="20" />
+                </div>
+                <span className="left-menu-item-label">{links[5].label}</span>
               </Link>
             </div>
           </div>

@@ -74,6 +74,7 @@ export default function Header() {
             </li>
             <li
               className="header__nav-item"
+              id="nav-item__signup"
               style={{ display: isAuth ? "none" : "block" }}
             >
               <Link className="nav-item__link" to="/signup">
@@ -90,6 +91,7 @@ export default function Header() {
             </li>
             <li
               className="header__nav-item"
+              id="nav-item__signin"
               style={{ display: isAuth ? "none" : "block" }}
             >
               <Link className="nav-item__link" to="/signin">

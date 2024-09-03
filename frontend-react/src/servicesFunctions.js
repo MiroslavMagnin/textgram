@@ -116,6 +116,34 @@ export async function getUserDataById(id) {
   }
 }
 
+export async function getUsersList() {
+  try {
+    const response = await axios.get("/user", {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-type": "Application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    // Handle successful
+    const usersList = response.data;
+    console.log("Get users list: " + usersList);
+
+    return usersList;
+  } catch (error) {
+    // Handle error
+    console.error(
+      "Get users list failed:",
+      error.response ? error.response.data : error.message
+    );
+
+    checkAuthorized();
+
+    return [];
+  }
+}
+
 export async function getAllFollowingPosts(id) {
   try {
     const response = await axios.get("/post/get-following-posts/" + id, {
@@ -173,6 +201,37 @@ export async function getAllUserPosts(id) {
   }
 }
 
+export async function follow(from, to) {
+  try {
+    const response = await axios.post(
+      "/user/follow?from=" + from + "&" + "to=" + to,
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-type": "Application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    );
+
+    // Handle successful
+    const res = response.data;
+    console.log("Follow successful: " + res);
+
+    return res;
+  } catch (error) {
+    // Handle error
+    console.error(
+      "Follow failed: ",
+      error.response ? error.response.data : error.message
+    );
+
+    checkAuthorized();
+
+    return "Follow failed";
+  }
+}
+
 export async function unfollow(from, to) {
   try {
     const response = await axios.delete(
@@ -188,6 +247,7 @@ export async function unfollow(from, to) {
 
     // Handle successful
     const res = response.data;
+    console.log("Unfollow successful: " + res);
 
     return res;
   } catch (error) {
