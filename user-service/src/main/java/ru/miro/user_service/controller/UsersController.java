@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.miro.user_service.dto.UserDTO;
 import ru.miro.user_service.exception.UserNotCreatedException;
 import ru.miro.user_service.model.Follower;
+import ru.miro.user_service.model.Response;
 import ru.miro.user_service.model.User;
 import ru.miro.user_service.service.FollowersService;
 import ru.miro.user_service.service.UsersService;
@@ -91,6 +92,12 @@ public class UsersController {
     @ResponseStatus(HttpStatus.OK)
     public List<Follower> getFollowing(@PathVariable long id) {
         return usersService.findOne(id).getFollowing();
+    }
+
+    @GetMapping("/is-follower")
+    @ResponseStatus(HttpStatus.OK)
+    public Response isFollower(@RequestParam("from") long from, @RequestParam("to") long to) {
+        return followersService.isFollower(from, to);
     }
 
     @PostMapping("/follow")

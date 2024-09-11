@@ -262,3 +262,34 @@ export async function unfollow(from, to) {
     return "Unfollow failed";
   }
 }
+
+export async function checkIsFollow(from, to) {
+  try {
+    const response = await axios.get(
+      "/user/is-follower?from=" + from + "&" + "to=" + to,
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-type": "Application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    );
+
+    // Handle successful
+    const res = response.data;
+    console.log("Check is follower successful: " + res);
+
+    return res;
+  } catch (error) {
+    // Handle error
+    console.error(
+      "Check is follower failed: ",
+      error.response ? error.response.data : error.message
+    );
+
+    checkAuthorized();
+
+    return "Check is follower failed";
+  }
+}

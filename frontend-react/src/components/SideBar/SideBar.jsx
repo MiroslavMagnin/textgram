@@ -3,6 +3,7 @@ import "./SideBar.css";
 import links from "../../data.json";
 import HomeIcon from "../../assets/icons/HomeIcon";
 import FeedIcon from "../../assets/icons/FeedIcon";
+import UsersIcon from "../../assets/icons/UsersIcon";
 import ProfileIcon from "../../assets/icons/ProfileIcon";
 import SettingsIcon from "../../assets/icons/SettingsIcon";
 import QuestionIcon from "../../assets/icons/QuestionIcon";
@@ -31,7 +32,7 @@ export default function SideBar() {
 
               <Link className="left-menu-item-a" to={links[2].link}>
                 <div className="left-menu-item-icon">
-                  <ProfileIcon fillColor={"white"} size="20" />
+                  <UsersIcon fillColor={"white"} size="20" />
                 </div>
                 <span className="left-menu-item-label">{links[2].label}</span>
               </Link>

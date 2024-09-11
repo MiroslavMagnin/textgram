@@ -93,13 +93,30 @@
 }
 
 /* No posts */
+.user-container__no-posts {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .no-posts {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-top: 2rem;
   padding: 1rem;
+
+  background-color: #3d3d3d;
+  border-radius: 20px;
+}
+
+.no-posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  width: 100%;
 
   background-color: #3d3d3d;
   border-radius: 20px;

@@ -22,12 +22,12 @@ public class Follower implements Serializable {
     @Column(name = "follow_id")
     private Long followId;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne()
     @JoinColumn(name = "from_user")
     @JsonIgnoreProperties(value = {"password", "followers", "following", "createdAt", "updatedAt", "role", "birthDate"})
     private User from;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne()
     @JoinColumn(name = "to_user")
     @JsonIgnoreProperties(value = {"password", "followers", "following", "createdAt", "updatedAt", "role", "birthDate"})
     private User to;

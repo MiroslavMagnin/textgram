@@ -11,7 +11,7 @@ import NotAuthorized from "../NotAuthorized/NotAuthorized.jsx";
 import UserItem from "./UserItem.jsx";
 
 export default function UsersPage() {
-  const user = JSON.parse(localStorage.getItem("user"));
+  const authUser = JSON.parse(localStorage.getItem("user"));
 
   const [isAuth, setAuth] = useState();
   const [usersList, setUsersList] = useState([]);
@@ -22,7 +22,7 @@ export default function UsersPage() {
     // Check authorized
     let token = localStorage.getItem("token");
     let tokenLifeCycle = checkAuthorized();
-    setAuth(token !== null && user !== null && tokenLifeCycle);
+    setAuth(token !== null && authUser !== null && tokenLifeCycle);
 
     // Get all users (nearly :))
     const fetchUserList = async () => {
@@ -43,7 +43,7 @@ export default function UsersPage() {
   }, []);
 
   const usersListOutput = usersList.map((user) => {
-    return <UserItem user={user} key={user.userId} />;
+    return <UserItem authUser={authUser} user={user} key={user.userId} />;
   });
 
   return (

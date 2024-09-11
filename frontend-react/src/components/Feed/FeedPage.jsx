@@ -81,7 +81,7 @@ export default function FeedPage() {
                       </div>
                     )
                   ) : (
-                    <div>YOU AREN'T AUTHORIZED</div>
+                    <NotAuthorized />
                   )}
                 </div>
               </div>

@@ -209,8 +209,14 @@
 
 /* Users */
 .user-item {
+  display: flex;
+  flex-flow: row wrap;
+
   margin-top: 1rem;
   padding: 1rem;
+
+  align-items: center;
+  justify-content: space-between;
 
   background-color: #3d3d3d;
   border-radius: 20px;
@@ -221,6 +227,46 @@
   margin-top: 0;
 }
 
+.user-left {
+  display: flex;
+  flex-flow: row wrap;
+
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+}
+
+.user-left__item-a {
+  display: flex;
+  align-items: center;
+
+  white-space: pre-line;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.user-left__item-icon {
+  display: flex;
+
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.user-left__item-label {
+  margin-left: 0.5rem;
+}
+
+.user-right {
+  display: flex;
+  flex-flow: row wrap;
+
+  gap: 0.5rem;
+}
+
+/* Mobiles */
 @media screen and (max-width: 376px) {
   .user-container__top-bar {
     display: flex;

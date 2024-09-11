@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar";
 import Button from "../Button/Button";
 import Post from "../Feed/Post/Post.jsx";
+import NoPosts from "../Feed/Post/NoPosts.jsx";
 import Loading from "../Loading/Loading.jsx";
 import NotAuthorized from "../NotAuthorized/NotAuthorized";
 import {
@@ -53,7 +54,7 @@ export default function UserPage() {
       try {
         posts = await getAllUserPosts(params.userId);
         setUserPosts(JSON.parse(posts));
-        setHavePosts(true);
+        setHavePosts(JSON.parse(posts).length !== 0);
         console.log("Received posts: " + userPosts);
       } catch (error) {
         console.error("Get user posts failed: ", error.message);
@@ -171,7 +172,7 @@ export default function UserPage() {
                             </div>
                           )
                         ) : (
-                          <div>YOU AREN'T AUTHORIZED</div>
+                          <NotAuthorized />
                         )}
                       </div>
 
